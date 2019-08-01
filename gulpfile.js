@@ -20,6 +20,8 @@ var revCollector = require("gulp-rev-collector");
 var gulpSync = require("gulp-sync")(gulp);
 var clean = require('gulp-clean');
 var less = require("gulp-less");
+var postcss = require('gulp-postcss');
+var px2rem = require('postcss-px2rem');
 
 var environment = argv.p||"";
 if(environment == "master"){
@@ -115,7 +117,9 @@ gulp.task('font', function(){
 
 //压缩合并css
 gulp.task('css', function(){
+	var processors = [px2rem({remUnit: 75})];
   return gulp.src('css/**/*.css')
+  	.pipe(postcss(processors))
     .pipe(minifyCSS())
     .pipe(rev())
     .pipe(gulp.dest(config.dist_css))
