@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	    <meta content="yes" name="apple-mobile-web-app-capable">
+	    <meta content="yes" name="apple-touch-fullscreen">
+	    <meta name="format-detection" content="telephone=no">
+	    <link rel="stylesheet" type="text/css" href="../../css/base-861d46e78e.css"/>
+			<link rel="stylesheet" type="text/css" href="../../css/staticPage/85c-e837bd002d.css"/>
+			<title>85度C优惠券</title>
+	</head>
+	<body>
+		<article id="coupon" class="body" v-cloak>
+			<div class="coupons-list" v-if="listType == 'available'">
+				<div v-for="(coupon,index) in couponList" class="list" @click="goDetail(index)">
+					<div class="coupon-name">{{ coupon.couponName }}</div>
+					<div class="coupon-date">有效期至：{{ coupon.endDate }}</div>
+					<div class="coupon-btn" v-if="coupon.couponType == 'forme'">立即查看</div>
+					<div class="coupon-btn" v-else>立即兑换</div>
+					<div class="coupon-img">
+						<img :src="'../../img/85c/' +  coupon.couponType + '.png'">
+					</div>
+				</div>
+			</div>
+			<div class="coupons-list history" v-else>
+				<div v-for="(coupon,index) in couponList" class="list">
+					<div class="coupon-name">{{ coupon.couponName }}</div>
+					<div class="coupon-date">有效期至：{{ coupon.endDate }}</div>
+					<div class="coupon-btn" v-if="coupon.couponType == 'forme'">立即查看</div>
+					<div class="coupon-btn" v-else>立即兑换</div>
+					<div class="coupon-img">
+						<img :src="'../../img/85c/' +  coupon.couponType + '-gray.png'">
+					</div>
+					<div class="overdue" v-if="coupon.state == '已过期'">
+						<img class="full-img" src="../../img/85c/overdue.png">
+					</div>
+					<div class="used" v-else>
+						<img class="full-img" src="../../img/85c/used.png">
+					</div>
+				</div>
+			</div>
+
+			<div class="coupon-tips" v-if="listType == 'available'">
+				<div class="tips" v-if="couponList.length == 0">
+					<img class="full-img" src="../../img/85c/tips.png">
+				</div>
+				没有更多优惠券了，<span class="special-font" @click="goHistory()">查看历史券&gt;</span>
+			</div>
+		</article>
+	</body>
+	<script type="text/javascript" src="../../js/staticPage/coupon-list-85c-35658da522.js"></script>
+</html>

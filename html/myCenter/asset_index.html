@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta name="format-detection" content="telephone=no">
+  <title>源码汇</title>
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/myCenter/myCenter.module.css">
+</head>
+
+<body>
+  <article class="asset_index_container" id="asset_index_container" v-cloak>
+    <div class="top-wrapper">
+      <div href="setup_center.html" style="padding: 20px;display: block;">
+        <a href="setup_center.html">
+          <img src="../../img/new/woman_icon.png" v-if="detail.gender == 2" class="myCenter">
+          <img src="../../img/new/man_icon.png" v-if="detail.gender == 1" class="myCenter">
+          <img src="../../img/new/default_header_icon.png" v-if="detail.gender == 0" class="myCenter">
+        </a>
+        <span v-if="detail.realName" class="head-span">{{ detail.realName }}</span>
+        <span v-else>
+          <span class="head-span">{{ detail.userMobile }}<a href="bindCard.html"><i>实名认证</i></a></span>
+        </span>
+      </div>
+
+      <div class="account_Number f-cb">
+        <p class="asset_money_txt">
+          <span>总资产（元）</span>
+          <span class="switch" v-on:click="assetSwitch">
+            <img src="../../img/new/img_show.png" class="eyeClose" alt="" v-show="!pswDisplay">
+            <img src="../../img/new/assets_eye_icon.png" class="eyeOpen" style="display: none;" alt="" v-show="pswDisplay">
+          </span>
+        </p>
+        <a href="../staticPage/totalAssets.html" class="asset_money_num" v-show="value">{{totalAssets}}</a>
+        <p v-show="!value" class="asset_money_num">******</p>
+        <div class="all_earning_txt">累计收益
+          <span class="" v-show="value">{{regularTotalProfit}}元</span>
+          <span class="" v-show="!value">*****元</span>
+        </div>
+        <div style="height: 1px;"></div>
+      </div>
+    </div>
+
+    <ul class="detail_list">
+      <li class="f-cb dl_info">
+        <div class="f-fl dl_account" style="font-size: 1.5rem;">
+          <p>账户余额(元)</p>
+          <p v-show="value" style="text-align: left;margin: 14px 0px;">{{totalAccount}}</p>
+          <p v-show="!value">****</p>
+        </div>
+        <div class="f-fr dl_btns">
+          <a @click="alert('请在APP提现')" href="#">提现</a>
+          <a href="bindCard.html" v-if="!isBindCard">充值</a>
+          <a :href="'recharge.html?accountBalance=' +totalAccount" v-else>充值</a>
+        </div>
+      </li>
+      <li class="f-cb dl_fixed">
+        <a href="regular_financial/rf_index.html" class="f-cb">
+          <div class="f-fl">
+            <!-- <img src="../../img/fixedIcon.png" alt="" class="icon"> -->
+            <span style="margin-left: 0;">我的投资</span>
+          </div>
+          <div class="f-fr">
+            <span v-show="value">{{regularTotalAssets}}</span>
+            <span v-show="!value">****</span>
+            <img src="../../img/arrows_right.png" alt="" class="arrow">
+          </div>
+        </a>
+      </li>
+      <li class="f-cb dl_record">
+        <a href="business_record.html" class="f-cb">
+          <div class="f-fl">
+            <img src="../../img/new/img_trans_record.png" alt="" class="icon">
+            <span>交易记录</span>
+          </div>
+          <div class="f-fr">
+            <img src="../../img/arrows_right.png" alt="" class="arrow">
+          </div>
+        </a>
+      </li>
+      <li class="f-cb dl_record" >
+        <a href="moneyCoupon.html" class="f-cb">
+          <div class="f-fl">
+            <img src="../../img/new/red_packet_icon.png" alt="" class="icon">
+            <span>红包</span>
+          </div>
+          <div class="f-fr">
+            <img src="../../img/arrows_right.png" alt="" class="arrow">
+          </div>
+        </a>
+      </li>
+      <li class="f-cb dl_record" >
+        <a href="rateCoupon.html" class="f-cb">
+          <div class="f-fl">
+            <img src="../../img/new/img_red_packet.png" alt="" class="icon">
+            <span>加息券</span>
+          </div>
+          <div class="f-fr">
+            <img src="../../img/arrows_right.png" alt="" class="arrow">
+          </div>
+        </a>
+      </li>
+      <li class="f-cb dl_record">
+        <a href="experienceMoney.html" class="f-cb">
+          <div class="f-fl">
+            <img src="../../img/new/img_gold.png" alt="" class="icon">
+            <span>体验金</span>
+          </div>
+          <div class="f-fr">
+            <img src="../../img/arrows_right.png" alt="" class="arrow">
+          </div>
+        </a>
+      </li>
+      <li class="f-cb dl_record">
+        <a href="../staticPage/coupon-list-85c.html" class="f-cb">
+          <div class="f-fl">
+            <img src="../../img/new/img_add_coupon.png" alt="" class="icon">
+            <span>85度C优惠券</span>
+          </div>
+          <div class="f-fr">
+            <img src="../../img/arrows_right.png" alt="" class="arrow">
+          </div>
+        </a>
+      </li>
+      <li class="f-cb dl_record">
+        <a href="../staticPage/neo-invite-new.html" class="f-cb">
+          <div class="f-fl">
+            <img src="../../img/new/img_my_invitition.png" alt="" class="icon">
+            <span>我的邀请</span>
+          </div>
+          <div class="f-fr">
+            <img src="../../img/arrows_right.png" alt="" class="arrow">
+          </div>
+        </a>
+      </li>
+    </ul>
+    <div class="menu-tabs">
+      <a class="tab" href="../home.html">
+        <img src="../../img/tabhost_icon_homepage_checked.png" class="tab-img selectimg">
+        <img src="../../img/tabhost_icon_homepage_default.png" class="tab-img">
+        <div class="tab-name">理财</div>
+      </a>
+      <a class="tab active" href="#">
+        <img src="../../img/tabhost_icon_my_checked.png" class="tab-img selectimg">
+        <img src="../../img/tabhost_icon_my_default.png" class="tab-img">
+        <div class="tab-name">资产</div>
+      </a>
+    </div>
+  </article>
+  <script src="../../js/myCenter/asset_index.js"></script>
+</body>
+
+</html>

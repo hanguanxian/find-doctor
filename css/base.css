@@ -1,0 +1,199 @@
+article,aside,blockquote,body,button,code,dd,details,div,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}
+
+body,
+button,
+html,
+input,
+select,
+textarea {
+    font-family: 'Microsoft Yahei',
+    '\5FAE\8F6F\96C5\9ED1',
+    'Hiragino Sans GB',
+    '\5B8B\4F53',
+    Arial;
+    color: #46525e}
+.g-ctn{display:block}
+a{
+    color:#000;
+    text-decoration: none;
+    outline: 0;
+    -webkit-transition: background 0.3s,
+    color 0.3s,
+    opacity 0.3s;
+    transition: background 0.3s,
+    color 0.3s,
+    opacity 0.3s;
+    display: inline-block;
+}
+a:active,
+a:focus,
+a:link,
+a:visited {
+    text-decoration: none;
+    outline: 0
+}
+a:hover {
+    /*color: #c00;*/
+    text-decoration: none;
+    outline: 0
+}
+html{
+    font-size: 62.5%;
+    width: 100%;
+    height: 100%;
+}
+body{
+    position: relative;
+    width: 100%;
+    overflow: auto;
+    height: 100%;
+    color: #000;
+    font-family: 'Microsoft YaHei', 'Heiti SC', simhei, 'Lucida Sans Unicode', 'Myriad Pro', 'Hiragino Sans GB', Verdana;
+    background: #fff;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    margin: 0;
+}
+li{
+    list-style-type: none;
+}
+.f-fl{
+    float: left;
+}
+.f-fr{
+    float: right;
+}
+.f-cb, .clearfix {
+  *zoom: 1;
+}
+
+.f-cb:before, .clearfix:before,
+.f-cb:after, .clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.f-cb:after, .clearfix:after {
+  clear: both;
+}
+.del-mgr{
+    margin-right: 0 !important;
+}
+.mid-Container{
+    width: 1000px;
+    position: relative;
+    margin: 0 auto;
+}
+.f-cb:after{
+    content: '';
+    font-size: 0;
+    height: 0;
+    clear: both;
+    display: block;
+    visibility: hidden;
+}
+.clearfix{overflow:auto;_height:1%}
+input{
+    outline: none;
+}
+button{
+    border: none;
+    outline: 0;
+}
+.errorMsg{
+    color: #af5c46;
+    height: 12px;
+    line-height: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 12px;
+    visibility: hidden;
+    text-align: left!important;;
+}
+
+header .returnArrow{
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+}
+header{
+    height: 1.8rem;
+    line-height: 1.8rem;
+    padding: 1.3rem 1.8rem;
+    border-bottom: solid 1px #d8d8d8;
+    text-align: center;
+    background: #fff!important;
+}
+header span{
+    font-size:1.8rem;
+    color:#4a4a4a;
+}
+header .rtLink{
+    font-size:15px;
+    color:#4a4a4a;
+}
+.greyBg{
+    background: #f2f2f2;
+    width: 100%;
+    /*height: 100%;*/
+    min-height: 100%;
+}
+.lightGreyBg{
+    background: #f7f7f7;
+    width: 100%;
+    /*height: 100%;*/
+}
+.whiteBg{
+    background: #fff;
+    width: 100%;
+    height: 100%;
+}
+input[type="checkbox"] {
+    display: none;
+}
+[id^="checkbox-1-"] + label {
+    /*background-color: #FFF;*/
+    /*border: 1px solid #C1CACA;*/
+    /*box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);*/
+    /*padding: 9px;*/
+    /*border-radius: 5px;*/
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    width: 1.2rem;
+    height: 1.2rem;
+    font-size: 0px;
+    /*border: solid 2px #F66B12;*/
+    /*margin-right: 30px;*/
+    /*background-color: red;*/
+    background: url("../img/add_interest_check.png") no-repeat;
+    background-size: 100% 100%;
+}
+[id^="checkbox-1-"]:checked + label:after {
+    content: '\2715';
+    position: absolute;
+    /*top: 5px;*/
+    /*margin-top: 0px;*/
+    width: 1.2rem;
+    height: 1.2rem;
+    /*border: solid 2px #F66B12;*/
+    /*left: 0px;*/
+    /*color: #758794;*/
+    /*!*width: 100%;*!*/
+    /*text-align: center;*/
+    /*font-size: 10px;*/
+
+    /*padding: 1px 0 0 0;*/
+    /*vertical-align: text-top;*/
+    background: url("../img/add_interest_gou.png") no-repeat;
+    background-size: 100% 100%;
+}
+[v-cloak] {
+    display: none !important;
+}
+.full-img {
+  display: block;
+  width: 100%;
+}
+.sendBtn-default-Bg {
+  background: #F66B12 !important;
+}

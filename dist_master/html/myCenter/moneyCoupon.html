@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta name="format-detection" content="telephone=no">
+  <title>源码汇</title>
+  <link rel="stylesheet" href="../../css/base-861d46e78e.css">
+  <link rel="stylesheet" href="../../css/product/product-8d50645fda.module-shi.css">
+</head>
+
+<body style="background: #f2f2f2;">
+  <article class="try-cash-container greyBg" id="try-cash-container" v-cloak>
+    <header class="f-cb">
+        <a href="#" class="f-fl" @click="btnBack">
+            <img src="../../img/back.png" alt="" class="returnArrow">
+        </a>
+      <span class="title">红包</span>
+    </header>
+    <div v-for="item in canUseCouponList" style="background-color: #f2f2f2" v-if="canUseCouponList.length> 0">
+      <div class="default_coupon_list" style="height: 80px;">
+        <img src="../../img/new/new_icon.png" alt="" class="selectGou" v-if="item.isNew">
+        <img src="../../img/new/expired_icon.png" alt="" class="selectGou" v-if="item.isPreExpired">
+        <div class="subTitle f-cb" style="height: auto;">
+          <p style="padding: 10px 0;">{{item.amount}}<span class="symbol">元</span></p>
+        </div>
+        <div class="details" style="height: auto;padding:6% 0 0 1%;">
+          <div class="coupon-name" style="padding-bottom: 8px;">{{item.titleTip}}</div>
+          <p><span>{{item.useTime}}获得</span></p>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center;margin: 10px;font-size: 15px;color: #666c77;">------   收到红包会自动进入余额账户   ------</div>
+  </article>
+  <script src="../../js/myCenter/moneyCoupon-81c7bf6383.js"></script>
+</body>
+
+</html>

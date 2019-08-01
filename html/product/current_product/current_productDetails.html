@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="format-detection" content="telephone=no">
+    <base href="/h5/">
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/base.css">
+    <script src="scripts/common/jquery-2.0.3.min.js"></script>
+    <link rel="stylesheet" href="css/product/product.module.css">
+
+    <title>源码汇</title>
+</head>
+<body>
+<article class="current_productDtls_container greyBg" id="current_productDtls_container" v-cloak>
+    <header class="f-cb">
+        <a href="html/activities/index.html" class="f-fl">
+            <img src="images/back.png" alt="" class="returnArrow">
+        </a>
+        <span>{{targetName}}</span>
+    </header>
+    <section class="benefitInfo">
+        <div>
+            <p>预期年化收益率</p>
+            <p>{{targetYearRate}}<span v-if="appendContent">+{{appendYearDate}}</span><span class="per">%</span>
+
+                <em class="targetActivityBg" v-show="appendContent">{{appendLable}}</em>
+            </p>
+
+        </div>
+        <ul class="f-cb addBlock">
+            <li class="f-fl mTxt">按月加息</li>
+            <li class="f-fl vTxt">投资满30天，自动加息0.5%，最高可达8.8%</li>
+        </ul>
+        <ul class="progressBlock" v-show="barStatus">
+            <li>
+                可投金额： <span class="available_amount">{{targetFreeAmount}}元</span>
+            </li>
+            <li class="progressBar">
+                <p></p>
+            </li>
+        </ul>
+    </section>
+    <section class="product_Buy">
+        <p class="beginLink f-cb">起购金额： <span class="f-fr">{{beginAmt}}元</span></p>
+        <div class="intro">
+            <p>收益方式</p>
+            <p>15:00之前转入当日计息；15:00之后转入次日计息，周末、法定节假日均不受影响，次日4点以后显示收益，可以在资产页面查看昨日收益。</p>
+        </div>
+
+    </section>
+    <section class="product_introduction">
+        <div class="f-cb firstLine">
+            <a href="html/product/current_product/current_product_information.html?targetName={{targetName}}&targetAmount={{targetAmount}}&targetYearRate={{targetYearRate}}"
+               class="f-fl">
+                <img src="images/pdt_detail.png" alt="" class="pi_icon">
+                <span style="margin-left: 2rem;">产品详情</span>
+            </a>
+            <!--<a href="http://www.51vest.com/security_assurance/index.html" class="f-fl">-->
+            <a href="html/product/security_assurance.html" class="f-fl">
+                <img src="images/security_assurance.png" alt="" class="pi_icon">
+                <span style="margin-left: 2rem;">安全保障</span>
+            </a>
+        </div>
+        <div class="f-cb secondLine">
+            <!--<a href="http://www.51vest.com/project_summarize/index.html" class="f-fl">-->
+            <a href="html/product/project_summarize.html" class="f-fl">
+                <img src="images/project_summarize.png" alt="" class="pi_icon">
+                <span style="margin-left: 2rem;">项目概述</span>
+            </a>
+            <a href="html/product/current_product/current_invest_record.html" class="f-fl">
+                <img src="images/product_detail.png" alt="" class="pi_icon">
+                <span style="margin-left: 2rem;">投资记录</span>
+            </a>
+        </div>
+    </section>
+    <div style="background-color: #f2f2f2;height: 12.6rem;"></div>
+    <aside style="position: absolute;width: 100%;bottom: 0">
+        <img src="images/pdt_risk.png" alt="" class="pdt_risk">
+        <a href="html/product/current_product/current_invest_money.html?dayRate={{targetDayRate}}&targetFreeAmount={{targetFreeAmount}}"
+           class="purchaseBtn">立即投资</a>
+    </aside>
+</article>
+<script src="scripts/common/vue.js"></script>
+<script src="scripts/common/vue-resource.min.js"></script>
+<script src="scripts/common/custom-function.js"></script>
+<script src="scripts/product/current_product/current_productDetails.js"></script>
+<script src="scripts/common/baiduScript.js"></script>
+</body>
+</html>

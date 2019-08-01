@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="format-detection" content="telephone=no">
+    <title>设置新密码</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/user/user.module.css">
+</head>
+<body>
+    <article class="user-common-container" id="user-setNewpsw-container">
+        <header class="f-cb">
+            <a href="javascript:history.go(-1)" class="f-fl">
+                <img src="../../img/back.png" alt="" class="returnArrow">
+            </a>
+            <span>设置新密码</span>
+        </header>
+        <section>
+            <p>已发送短信验证码至手机<span>{{ mobileText }}</span></p>
+            <div class="form-input-box">
+                <label class="form-label">短信验证码</label>
+                <input class="phoneNum" type="text" placeholder="请输入短信验证码"  style="text-indent: 10rem;" v-model="smsText">
+                <button id="sendBtn" class="sendBtn" v-bind:class="{ 'sendBtn-default-Bg': bgStatus, 'sendBtn-disabled-Bg': !bgStatus}"  v-on:click="sendSms"  v-bind="{ disabled: disableAttr}" v-html="sendTxt" disabled="true"></button>
+            </div>
+            <div class="form-input-box">
+                <label class="form-label">新密码</label>
+                <input class="password" :type="type" placeholder="请输入6-16位数字或字母" v-model="password">
+                <a href="javascript:;" class="switch" v-on:click="psSwitch">
+                    <img src="../../img/eyelash_assets.png" class="eyeClose" alt="" v-show="!pswDisplay">
+                    <img src="../../img/eye_assets.png" class="eyeOpen" style="display: none;" alt="" v-show="pswDisplay">
+                </a>
+            </div>
+            <button class="loginBtn" v-on:click="setPassword" id="setPswBtn">完成</button>
+        </section>
+    </article>
+    <script src="../../js/user/setNewPsw.js"></script>
+</body>
+</html>

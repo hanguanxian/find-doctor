@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="format-detection" content="telephone=no">
+    <base href="/h5/">
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/base.css">
+    <script src="scripts/common/jquery-2.0.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/product/product.module.css">
+    <title>源码汇</title>
+</head>
+<body style="background: #f2f2f2;">
+<article class="currPro-success-container greyBg" id="currPro-success-container" v-cloak>
+    <header class="f-cb">
+        <a href="html/product/current_product/current_invest_money.html" class="f-fl">
+            <img src="images/back.png" alt="" class="returnArrow">
+        </a>
+        <span>结果详情</span>
+    </header>
+    <section class="content-section f-cb">
+        <img src="images/buySuccessProcess.png" class="f-fl process-status">
+        <aside class="f-fl">
+            <div class="purchaseStatus">
+                <p>恭喜您成功转入活期宝</p>
+            <p>成功投资{{money}}元</p>
+            </div>
+            <div class="startCount">
+                <p>开始计息</p>
+                <p>{{buyTime}}</p>
+            </div>
+            <div class="duedate">
+                <p>收益到账</p>
+                <p>{{nextPayDate}}</p>
+            </div>
+        </aside>
+
+    </section>
+    <button class="jumpAsset" @click="toAsset">查看资产</button>
+    <button class="jumpIndex" @click="toIndexPage">返回首页</button>
+</article>
+<script src="scripts/common/vue.js"></script>
+<script src="scripts/common/vue-resource.min.js"></script>
+<script src="scripts/common/custom-function.js"></script>
+<script src="scripts/product/current_product/current_invest_success.js"></script>
+<script src="scripts/common/baiduScript.js"></script>
+</body>
+</html>

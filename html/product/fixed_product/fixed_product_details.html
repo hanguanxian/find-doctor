@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta name="format-detection" content="telephone=no">
+	<title>源码汇</title>
+	<link rel="stylesheet" href="../../../css/base.css">
+	<link rel="stylesheet" href="../../../css/product/product.module.css">
+	<link rel="stylesheet" href="../../../css/fixedProduct/fixedProDetail.css">
+</head>
+
+<body class="bodyBg">
+	<article class="fixed_productDtls_container greyBg" id="fixed_productDtls_container" v-cloak>
+		<header class="f-cb">
+			<a href="../../home.html" class="f-fl">
+					<img src="../../../img/back.png" alt="" class="returnArrow">
+				</a>
+			<span>{{ productName }}</span>
+		</header>
+		<section class="section1">
+			<div class="sectionTop">
+				<p class="title neosansstdregular"><span v-if="activityRate">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>{{basicRateStr}}<span v-if="!activityRate">%</span><span class="plus" v-if="activityRate">+{{activityRateStr}}%</span></p>
+				<p class="subTitle">预期年化收益率</p>
+				<div class="tagList" v-if="tagList.length > 0">
+					<img :src="tag.tagIconUrl" v-for="tag in tagList" class="tagIcon"/>
+				</div>
+			</div>
+			<img v-if="sprogTag" class="fullimg" src="../../../img/new/line-0.5.png" />
+			<div class="sprogTag" v-if="sprogTag">
+				<img :src="sprogTag.tagIconUrl" class="icon"/>
+				<span>{{sprogTag.description}}</span>
+			</div>
+		</section>
+		<div class="placeholder f-cb"></div>
+		<section class="section1">
+			<div class="sectionBtm">
+				<div class="item neosansstdregular">
+					<p style="border-right: 1px solid #E1E5E8;">
+						<span>{{minInvestAmount}}</span>起投金额(元)
+					</p>
+					<p>
+						<span>{{investDays}}</span>投资期限(天)
+					</p>
+				</div>
+			</div>
+			<div class="progressWrap">
+				<div class="progressBar">
+					<div class="currentProgress"></div>
+				</div>
+				<div class="progressDes">
+					<span>剩余可售：</span><span class="restMoney" v-if="investmentRatio == 100">¥0</span><span v-else class="restMoney">¥{{leftAmount}}</span><span class="f-fr">进度：{{investmentRatio}}%</span>
+				</div>
+			</div>
+		</section>
+		<div class="placeholder f-cb"></div>
+		<div>
+			<section class="productRange">
+				<img class="cycleLine" src="../../../img/new/cycleLine.png"  />
+				<ul class="f-cb" style="margin: 12px auto 6px; width: 97%;">
+					<li>
+						<div class="oneThird rangeTitle">开始计息</div>
+					</li>
+					<li>
+						<div class="oneThird rangeTitle title-center">计息结束</div>
+					</li>
+					<li>
+						<div class="oneThird rangeTitle title-right">回款到账</div>
+					</li>
+				</ul>
+
+				<ul class="f-cb">
+					<li>
+						<div class="oneThird rangeContent" style="width: 31.5%">{{beginDateStr}}</div>
+					</li>
+					<li>
+						<div class="oneThird rangeContent title-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{endDateStr}}</div>
+					</li>
+					<li>
+						<div class="oneThird rangeContent title-right" style="width: 35%;">计息结束后1-3工作日</div>
+					</li>
+				</ul>
+			</section>
+			<section class="section3">
+				<div class="title">
+					<a href="https://m.51doro.com/h5/html/product/security_assurance_app.html">
+						<img src="../../../img/new/banner-prouct-detail.png" class="product-banner"/>
+					</a>
+				</div>
+			</section>
+		</div>
+		<div class="placeholder f-cb"></div>
+		<section class="product_introduction" style="margin-top: 0;">
+			<div class="f-cb firstLine">
+				<a :href="'fixed_product_information.html?productId='+ productId">
+						<span style="margin-left: 2rem;color: #212629;">产品详情</span>
+						<img src="../../../img/arrows_right.png" alt="" class="arrow f-fr">
+					</a>
+			</div>
+			<div class="f-cb firstLine">
+				<a :href="'project_summarize.html?productId='+ productId">
+						<span style="margin-left: 2rem;color: #212629;">项目概述</span>
+						<img src="../../../img/arrows_right.png" alt="" class="arrow f-fr">
+					</a>
+			</div>
+			<div class="f-cb firstLine">
+				<a :href="'fixed_invest_record.html?productId='+ productId">
+						<span style="margin-left: 2rem;color: #212629;">投资记录</span>
+						<img src="../../../img/arrows_right.png" alt="" class="arrow f-fr">
+					</a>
+			</div>
+		</section>
+		<aside style="padding-bottom: 28px; text-align: center;">
+			<img src="../../../img/new/img_security_day.png" alt="" class="pdt_risk">
+			<div style="display: inline-block;font-size: 12px; color: #989BA2;">
+				安全运营<span style="color: #1E2637;">{{safeOperateDay}}</span>天 历史100%兑付
+			</div>
+		</aside>
+			<div class="f-cb" style="position: fixed;bottom: 0;width: 100%; padding: 10px 15px;background-color: #fff;">
+				<a href="#" class="investBtn" v-if="state == 500" style="background-color: #868c90;width: 92%;">已售罄</a>
+				<a href="#" class="investBtn" v-if="state == 300" style="background-color: #868c90;width: 92%;">预上架</a>
+				<a :href="'fixed_invest_money.html?productId='+ productId" class="investBtn" v-if="state == 400" style="width: 92%;">立即投资</a>
+			</div>
+
+	</article>
+	<script src="../../../js/product/fixed_product/fixed_product_details.js"></script>
+</body>
+
+</html>

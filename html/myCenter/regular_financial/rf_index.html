@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta name="format-detection" content="telephone=no">
+  <title>源码汇</title>
+  <link rel="stylesheet" href="../../../css/base.css">
+  <link rel="stylesheet" href="../../../css/myCenter/regular_financial/rf_index.css">
+</head>
+
+<body style="background-color: #f2f2f2">
+  <article class="rf_index_artical greyBg" id="rf_index_artical" v-cloak>
+    <!--<div class="contentList" id="wrapper">
+		<div class="scroller">-->
+    <header class="f-cb">
+      <a href="#" @click="goBack" class="f-fl">
+		            <img src="../../../img/back.png" alt="" class="returnArrow">
+		        </a>
+      <span id="head-title">我的投资</span>
+      <a href="rf_index.html?type=history" class="loginLink f-fr" style="font-size: 14px;" v-if="type != 'history'">历史资产</a>
+    </header>
+    <section class="top_section" v-if="type != 'history'">
+      <div class="ts_title">
+        <div class="half">
+          <p class="ts_font1">持有资产总额（元）</p>
+          <p class="ts_font2_pre">{{totalAsset}}</p>
+        </div>
+        <div class="ts_line"></div>
+        <div class="half" style="padding-left: 10%;width: 38%;">
+          <p class="ts_font1">累计收益（元）</p>
+          <p class="ts_font2_pre">{{totalProfit}}</p>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="tab_section">
+      <div class="tab_div_selected" v-if="tab_showTab1">
+        <p class="tab_title">持有资产</p>
+      </div>
+      <div class="tab_div_unselect" v-else v-on:click="changeTab">
+        <p class="tab_title">持有资产</p>
+      </div>
+      <div class="tab_div_selected" v-if="!tab_showTab1">
+        <p class="tab_title">历史资产</p>
+      </div>
+      <div class="tab_div_unselect" v-else v-on:click="changeTab">
+        <p class="tab_title">历史资产</p>
+      </div>
+    </section> -->
+    <div></div>
+    <section v-if="type != 'history'" class="tab_content" id="tab_content1">
+      <ul class="rf_product_ul" v-for="proc in myProducts">
+        <li v-on:click="showMyProcDetail(proc.dqUserId,proc.state)">
+          <div class="li_top">
+            <!-- <img src="http://jyp.oss-cn-shanghai.aliyuncs.com/pic/58bedcdc-556e-443a-bacc-928f3afc58aa.png" alt="" class="li_icon"> -->
+            <div class="li_nameDiv">{{proc.productName}}</div>
+            <div class="li_raiseDiv" v-if="proc.hasRateExtend">
+              <p>加息券</p>
+            </div>
+            <div class="li_raiseDiv" v-if="proc.hasPrincipalExtend">
+              <p>体验金</p>
+            </div>
+            <!-- <div class="li_dayDiv">{{proc.remainDay}}</div> -->
+          </div>
+          <div class="li_middle">
+            <div class="li_fsize1" style="text-align: left;">
+              投资金额<div class="black">{{proc.buyAmount}}</div>
+            </div>
+            <div class=" li_fsize1" v-if="proc.expectedAmount">
+              预期收益<div class="black">{{ formatFloat(proc.expectedAmount) }}</div>
+            </div>
+            <div class=" li_fsize1" style="text-align: right;" v-if="proc.endDate">
+              到期日期<div>{{proc.endDate}}</div>
+            </div>
+            <div class=" li_fsize1" style="text-align: right;width: 64%;position: relative;top: -14px;color: red;" v-if="proc.state == '待支付'">
+              <div>待支付</div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section v-else class="tab_content" id="tab_content2">
+      <ul class="rf_product_ul" v-for="proc in hisProducts">
+        <li v-on:click="showHisProcDetail(proc.dqUserId)">
+          <div class="li_top">
+            <!-- <img src="http://jyp.oss-cn-shanghai.aliyuncs.com/pic/58bedcdc-556e-443a-bacc-928f3afc58aa.png" alt="" class="li_icon"> -->
+            <div class="li_nameDiv">{{proc.productName}}</div>
+            <div class="li_raiseDiv" v-if="proc.hasRateExtend">
+              <p>加息券</p>
+            </div>
+            <div class="li_raiseDiv" v-if="proc.hasPrincipalExtend">
+              <p>体验金</p>
+            </div>
+            <!-- <div class="li_dayDiv">{{proc.remainDay}}</div> -->
+          </div>
+          <div class="li_middle">
+            <div class="li_fsize1" style="text-align: left;">
+              投资金额<div>{{proc.buyAmount}}</div>
+            </div>
+            <div class=" li_fsize1">
+              预期收益<div>{{ formatFloat(proc.expectedAmount) }}</div>
+            </div>
+            <div class=" li_fsize1" style="text-align: right;">
+              到期日期<div>{{proc.endDate}}</div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <!--<div id="pullUp">
+                <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+            </div>-->
+    <!--</div>
+		</div>-->
+  </article>
+  <script src="../../../js/common/iscroll.js"></script>
+  <script src="../../../js/myCenter/regular_financial/rf_index.js"></script>
+</body>
+
+</html>

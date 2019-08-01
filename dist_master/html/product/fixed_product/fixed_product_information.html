@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="apple-touch-fullscreen">
+		<meta name="format-detection" content="telephone=no">
+		<title>源码汇</title>
+		<link rel="stylesheet" href="../../../css/base-861d46e78e.css">
+		<link rel="stylesheet" href="../../../css/product/fixedProDetail-b216e264cf.css">
+	</head>
+
+	<body>
+		<article class="product-info-container" id="product-info-container" v-cloak>
+			<header class="f-cb">
+				<a :href="'fixed_product_details.html?productId=' + productId" class="f-fl">
+					<img src="../../../img/back.png" alt="" class="returnArrow">
+				</a>
+				<span class="title">产品详情</span>
+			</header>
+			<article class="productInfo" id="productInfo" v-cloak>
+				<section class="firstSection">
+					<p>产品名称：<span class="largeConten">{{targetName}}</span></p>
+					<p>产品类型：<span class="largeConten">债权及债权收益权转让</span></p>
+					<p>产品规模：<span class="largeConten">{{targetAmount}}万</span></p>
+					<p>产品期限：<span class="largeConten">{{investDays}}天</span></p>
+					<p>起购金额：<span class="largeConten">{{minAmount}}元起</span></p>
+				</section>
+				<img class="fullimg" src="../../../img/line-0.5.png" />
+				<section>
+					<p class="title"><span class="icon"></span>预期收益</p>
+					<p>预计年化收益率：<span class="blackFont">{{yearRate}}%</span></p>
+					<p>起息日：<span style="width: 51px; height: 1px;display:inline-block;"></span><span class="blackFont">{{beginDateStr}}</span></p>
+					<p>到期日：<span style="width: 51px; height: 1px;display:inline-block;"></span><span class="blackFont">{{endDateStr}}</span></p>
+					<p>到期赎回方式：<span style="width: 12px; height: 1px;display:inline-block;"></span><span class="blackFont">到期一次性归还本金与收益</span></p>
+				</section>
+				<img class="fullimg" src="../../../img/line-0.5.png" />
+				<section>
+					<p class="title"><span class="icon"></span>购买准备</p>
+					<p>1. 注册并实名认证</p>
+					<p>2. 绑定银行卡</p>
+					<p>3. 提前充值，可提高抢购成功率</p>
+				</section>
+				<img class="fullimg" src="../../../img/line-0.5.png" />
+				<section>
+					<p class="title"><span class="icon"></span>还款须知</p>
+					<p>提前还款约定：本项目由于借款人资质优良，可能会提前还款</p>
+				</section>
+				<img class="fullimg" src="../../../img/line-0.5.png" />
+				<section>
+					<p class="title"><span class="icon"></span>怎么赎回</p>
+					<p>产品到期后，本金与收益将自动赎回至您的余额账户中。未到期前不能提前赎回，资金一般在到期日后的1-3个工作日内到账。（注：本产品存在提前到期的可能性，若产品提前到期，本金与实际产品期限内的收益将提前自动赎回至您的余额账户中）</p>
+				</section>
+			</article>
+			<script src="../../../js/product/product_information-54409848d7.js"></script>
+	</body>
+
+</html>

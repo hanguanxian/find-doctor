@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="format-detection" content="telephone=no">
+    <base href="/h5/">
+    <script src="scripts/common/jquery-2-96b6ea2cfc.0.3.min.js"></script>
+    <title>源码汇</title>
+</head>
+	<body>
+	</body>
+	<script src="scripts/common/custom-function-be5fd64f91.js"></script>
+	<script src="scripts/common/baiduScript-87719fbcdd.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var param = getUrlParam();
+        var amount = param.amount;
+		var userId = storage.get("userId");
+		if(!userId){
+			setError("获取用户信息失败");
+			return;
+		}
+		
+
+		$.ajax({
+                url: '/api/payment-bank-card/recharge-check-bind?userId='+userId,
+                type : "GET",
+                dataType : "JSON",
+                success : function(data){
+                    var isBindCard = data.isBindCard;
+                    var paymentChannelCode = data.paymentChannelCode;
+                    //alert(data.isBindCard);
+                    if(isBindCard){
+                    	if(paymentChannelCode==paymentChannelCode_BF){
+                    		window.location.href="html/myCenter/recharge.html?paymentChannelCode="+paymentChannelCode+"&amount="+amount;
+                    	}
+                    	else if(paymentChannelCode==paymentChannelCode_FY){
+                    		window.location.href="html/myCenter/recharge.html?paymentChannelCode="+paymentChannelCode+"&amount="+amount;
+
+                    	}
+                    	else{
+                    		setError("未知支付渠道:"+paymentChannelCode);
+							return;
+                    	}
+                    }
+                    else{
+                    	window.location.href="html/myCenter/bindCard.html?amount=" + amount;
+                    }
+                },
+                error : function(data){
+                    var e = eval('('+data.responseText+')');
+                    setError(e.error.message);
+                }
+        })
+	})
+		
+	function setError(msg){
+		$("body").append(msg);
+	}
+	</script>
+</html>

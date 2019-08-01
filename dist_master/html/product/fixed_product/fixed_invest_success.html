@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta name="format-detection" content="telephone=no">
+  <title>源码汇</title>
+  <link rel="stylesheet" href="../../../css/base-861d46e78e.css">
+  <link rel="stylesheet" href="../../../css/product/product-8e6c34a848.module.css">
+</head>
+
+<body style="background: #f2f2f2;">
+  <article class="fixed-success-container greyBg" id="fixed-success-container" v-cloak>
+    <header class="f-cb">
+      <a href="../../myCenter/asset_index.html" class="f-fl">
+            <img src="../../../img/back.png" alt="" class="returnArrow">
+        </a>
+      <span>结果详情</span>
+    </header>
+    <section class="content-section f-cb">
+      <img src="../../../img/buySuccessProcess.png" class="f-fl process-status">
+      <aside class="f-fl">
+        <div class="purchaseStatus">
+          <p>恭喜您投资成功</p>
+          <p>成功投资{{amount}}元</p>
+        </div>
+        <div class="startCount" style="margin-top: 2rem;">
+          <p>开始计息</p>
+          <p>{{beginDate}}</p>
+        </div>
+        <div class="duedate" style="margin-top:33px;">
+          <p>到期后本息1-3个工作日回款到<span style="color: #F66B12;">账户余额</span></p>
+        </div>
+      </aside>
+    </section>
+    <section>
+      <button class="checkAsset" @click="toAsset">完成</button>
+      <!-- <button class="returnIndex" @click="toIndexPage">返回首页</button> -->
+    </section>
+  </article>
+  <script src="../../../js/product/fixed_product/fixed_invest_success-b7d815104f.js"></script>
+</body>
+
+</html>

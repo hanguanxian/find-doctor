@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="format-detection" content="telephone=no">
+    <title>源码汇</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/user/user.module.css">
+</head>
+<body>
+    <article class="user-common-container" id="user-authentication-container">
+        <header class="f-cb">
+            <a href="javascript:history.go(-1)" class="f-fl">
+                <img src="../../img/back.png" alt="" class="returnArrow">
+            </a>
+            <span></span>
+        </header>
+        <section>
+            <h2 class="title">请先进行身份验证</h2>
+            <div class="form-input-box">
+              <label class="form-label" style="line-height: 3.8rem;">真实姓名</label>
+              <input class="" type="text" placeholder="" style="text-indent: 30%;" v-model="name">
+            </div>
+            <div class="form-input-box">
+              <label class="form-label" style="line-height: 3.8rem;">身份证号码</label>
+              <input class="" type="tel" placeholder="" v-model="idCardNo" style="text-indent: 35%;">
+            </div>
+            <div id="regBtn" class="regBtn" @click="submit">下一步</div>
+        </section>
+    </article>
+    <script src="../../js/user/authentication.js"></script>
+
+</body>
+</html>

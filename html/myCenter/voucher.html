@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="format-detection" content="telephone=no">
+    <base href="/h5/">
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="sass/myCenter_dtls.css">
+    <script src="scripts/common/jquery-2.0.3.min.js"></script>
+    <link rel="stylesheet" href="css/myCenter/experienceMoney.css">
+    <title>源码汇</title>
+</head>
+<body>
+<article class="voucher_container greyBg" id="voucher_container" v-cloak>
+    <header class="f-cb">
+        <a href="javascript:history.go(-1)" class="f-fl">
+            <img src="images/back.png" alt="" class="returnArrow">
+        </a>
+        <span>我的卡券</span>
+    </header>
+    <ul class="voucher_tab">
+        <li class="tab_selected f-fl">体验金券（{{moneyCouponCount}}）</li>
+        <li class="f-fr">加息券（{{rateCouponCount}}）</li>
+    </ul>
+    <section>
+        <div class="voucher_list_wrap">
+            <div class="no_voucher" v-if="!moneyCouponFlag">无可用体验金券</div>
+            <ul class="voucher_list_tyj" v-else="moneyCouponFlag">
+                <li v-for="item in moneyCouponData">
+                    <div class="voucher_tyj_kgq" v-if="!item.overdue">
+                        <div class="voucher_wrap">
+                            <i v-if="item.expiring" class="voucher_tyj_status_kgq"></i>
+                            <p class="voucher_title">{{ item.titleTip }}体验金<span class="voucher_amount f-fr"><i>￥</i>{{ item.amount }}</span></p>
+                            <div class="voucher_detail">
+                                <p>年化收益率：<span class="yield">{{ item.yearRateStr }}</span></p>
+                                <p>有效期至：{{ item.closingDate }} <span style="margin-left: 30px;">使用周期：{{ item.dayCount }}天</span></p>
+                                <p>使用规则：投资{{ item.minDays }}天以上金额满{{ item.minAmount }}以上产品可用</p>
+                                <p>使用周期：{{ item.dayCount }}天</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="voucher_tyj_y"  v-else="item.overdue">
+                        <div class="voucher_wrap">
+                            <i v-if="!item.isUsed" class="voucher_tyj_status_ygq"></i>
+                            <i v-else="item.isUsed" class="voucher_tyj_status_ysy"></i>
+                            <p class="voucher_title">{{ item.titleTip }}体验金<span class="voucher_amount f-fr"><i>￥</i>{{ item.amount }}</span></p>
+                            <div class="voucher_detail">
+                                <p>年化收益率：<span class="yield">{{ item.yearRateStr }}</span></p>
+                                <p>有效期至：{{ item.closingDate }}</p>
+                                <p>使用规则：投资{{ item.minDays }}天以上金额满{{ item.minAmount }}以上产品可用</p>
+                                <p>使用周期：{{ item.dayCount }}天</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="voucher_list_wrap"  style="display: none;">
+            <div class="no_voucher"  v-if="!rateCouponFlag">无可用加息券</div>
+            <ul class="voucher_list_jx" v-else="rateCouponFlag">
+                <li v-for="item in rateCouponData">
+                    <div class="voucher_jx" v-if="!item.overdue">
+                        <div class="voucher_wrap">
+                            <i v-if="item.expiring" class="voucher_jx_status_kgq"></i>
+                            <p class="voucher_title">{{ item.titleTip }}加息券<span class="voucher_yield f-fr">{{ item.yearRateStr }}<i>%</i></span></p>
+                            <div class="voucher_detail">
+                                <p>有效期至：{{ item.closingDateStr }}</p>
+                                <p>使用规则：投资{{ item.minDays }}天以上金额满{{ item.minAmount }}以上产品可用</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="voucher_jx_y" v-else="item.overdue">
+                        <div class="voucher_wrap">
+                            <i v-if="!item.isUsed" class="voucher_jx_status_ygq"></i>
+                            <i v-else="item.isUsed" class="voucher_jx_status_ysy"></i>
+                            <p class="voucher_title">{{ item.titleTip }}加息券<span class="voucher_yield f-fr">{{ item.yearRateStr }}<i>%</i></span></p>
+                            <div class="voucher_detail">
+                                <p>有效期至：{{ item.closingDateStr }}</p>
+                                <p>使用规则：投资{{ item.minDays }}天以上金额满{{ item.minAmount }}以上产品可用</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+</article>
+<script src="scripts/common/vue.js"></script>
+<script src="scripts/common/vue-resource.min.js"></script>
+<script src="scripts/common/custom-function.js"></script>
+<script src="scripts/myCenter/voucher.js"></script>
+<script src="scripts/common/baiduScript.js"></script>
+</body>
+</html>

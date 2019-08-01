@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta name="format-detection" content="telephone=no">
+  <title>源码汇</title>
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/myCenter/myCenter.module.css">
+</head>
+
+<body>
+  <article class="bank-list-container" id="bank-list-container" v-cloak>
+    <header>
+      <a href="javascript:history.go(-1)" class="f-fl">
+            <img src="../../img/back.png" alt="" class="returnArrow">
+        </a>
+      <span class="title">源码汇</span>
+    </header>
+    <section>
+      <div class="bank-header">
+        <div class="warn">
+          <img src="../../img/warn.png" class="warnIcon">
+          <p class="warnDesc">每个银行的储蓄卡默认投资额度与次数会有限制，请根据您的情况选择银行卡。</p>
+        </div>
+        <ul class="f-cb list" v-for="item in listData">
+          <li class="f-fl">
+            <a href="javascript:;" v-on:click="chooseBank(item)">
+                <div class="bankIcon">
+                  <img v-bind:src="item.icon" style="width: 100%; display: block;"/>
+                </div>
+                <div class="d-text">
+                    <div class="bankName">{{ item.bankName }}</div>
+                    <div class="desc">{{ item.tip }}</div>
+                </div>
+              </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </article>
+  <script src="../../js/myCenter/choseBank.js"></script>
+</body>
+
+</html>

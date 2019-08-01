@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	    <meta content="yes" name="apple-mobile-web-app-capable">
+	    <meta content="yes" name="apple-touch-fullscreen">
+	    <meta name="format-detection" content="telephone=no">
+      <link rel="stylesheet" href="../../css/base-861d46e78e.css">
+	    <title>总资产</title>
+			<link rel="stylesheet" href="../../css/base-861d46e78e.css">
+      <style>
+        body { background-color: #fff; font-size: 15px; }
+				.top { width: 90%; height: 38px; padding-top: 26px; margin: auto; }
+				.top img { width: 12px; }
+				h1 { font-size:25px; color:#212629; line-height:15px; font-weight: bolder; margin: 9px 15px 0;}
+				h1 img { width: 100%; }
+				.totalAssets .lists { padding: 0 15px; position: relative; }
+        .totalAssets .lists .list { height: 47px; line-height: 47px; border-bottom: 1px solid #eceef3; }
+        .totalAssets .square { width: 11px; height: 11px; display: inline-block; vertical-align: middle; margin-top: -3px; margin-right: 6px; }
+        .totalAssets .square.specialSquare { position: absolute; top: 20px; }
+        .totalAssets .color1 { background-color: #f4731f; }
+        .totalAssets .color2 { background-color: #e6bf1a; }
+        .totalAssets .color3 { background-color: #70cac4; }
+        .totalAssets .num { font-size: 15px; float: right; }
+        .totalAssets .detail { color: #989ba2; font-size: 13px; padding: 18px 0 18px 18px; }
+        .totalAssets .detail li { margin-bottom: 7px; }
+        .totalAssets .arrow { width: 8px; margin-left: 5px; transform: rotate(90deg); -webkit-transform: rotate(90deg);}
+				.totalAssets .arrow.open { transform: rotate(-90deg); -webkit-transform: rotate(-90deg);}
+      </style>
+	</head>
+	<body>
+		<header class="f-cb">
+      <a href="../myCenter/asset_index.html" class="f-fl">
+            <img src="../../img/back.png" alt="" class="returnArrow">
+        </a>
+      <span class="title">总资产</span>
+    </header>
+		<!-- <h1>
+			<span>总资产</span>
+			<img src="../../img/line-0.5.png" />
+		</h1> -->
+		<div class="chart-wrapper">
+			<div id="main" style="width: 90%;height:245px;margin: auto;"></div>
+		</div>
+    <div id="totalAssets" class="totalAssets" v-cloak>
+      <ul class="lists">
+        <li class="list f-cb">
+          <span class="square color1"></span>
+          <label class="">定期理财</label>
+          <div class="num">{{ assets.totalAssets }}元</div>
+        </li>
+        <li class="list f-cb">
+          <span class="square color2"></span>
+          <label class="">可用余额</label>
+          <div class="num">{{ assets.totalAccount }}元</div>
+        </li>
+      </ul>
+      <div class="lists">
+        <span class="square color3 specialSquare"></span>
+        <div class="list f-cb" style="margin-left: 20px; border-bottom: 1px dotted #eceef3;">
+          <label class="">冻结金额</label>
+          <div class="num" @click="dongjieDetail">{{ assets.frozenSum }}元 <img :class="{arrow:true, open: dongjieDetailFlag}" src="../../img/arrowRight.png" /></div>
+        </div>
+        <ul class="detail" v-if="dongjieDetailFlag">
+          <li class="f-cb">
+            <span>提现在途金额</span>
+            <span class="f-fr">{{ assets.frozenTotalAccount }}元</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+		<script src="../../js/staticPage/totalAssets-08cd7b2392.js"></script>
+	</body>
+</html>

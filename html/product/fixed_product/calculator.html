@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="format-detection" content="telephone=no">
+    <base href="/h5/">
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/base.css">
+    <script src="scripts/common/jquery-2.0.3.min.js"></script>
+    <link rel="stylesheet" href="css/product/product.module.css">
+
+    <title>源码汇</title>
+</head>
+<body>
+<article class="calculator-container greyBg" id="calculator-container" v-cloak>
+    <header class="f-cb">
+        <a v-bind:href="returnUrl" class="f-fl">
+            <img src="images/back.png" alt="" class="returnArrow">
+        </a>
+        <span class="title">收益计算器</span>
+    </header>
+    <section class="cal-earning">
+        <p>预期总收益(元)</p>
+        <p class="plan-earning-num">{{planNum}}</p>
+        <ul class="f-cb plan-down">
+            <li class="f-fl" style="width: 40%">
+                <p>年化收益(%)</p>
+                <p class="pd-value">{{productData.yearRate}}</p>
+            </li>
+            <li class="f-fl verLine"></li>
+            <li class="f-fr" style="width: 40%">
+                <p>投资期限(天)</p>
+                <p class="pd-value">{{productData.day}}</p>
+            </li>
+        </ul>
+
+    </section>
+    <div class="form-input-box">
+    	<input class="countNnm" type="text" v-model="money_num" placeholder="请输入投资金额">
+    </div>
+</article>
+<script src="scripts/common/vue.js"></script>
+<script src="scripts/common/vue-resource.min.js"></script>
+<script src="scripts/common/custom-function.js"></script>
+<script src="scripts/product/fixed_product/fixed_session_storage.js"></script>
+<script src="scripts/product/fixed_product/calculator.js"></script>
+<script src="scripts/common/baiduScript.js"></script>
+</body>
+</html>

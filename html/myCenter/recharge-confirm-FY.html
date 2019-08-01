@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="../../scripts/common/jquery-2.0.3.min.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf8" pageEncoding="utf8" />
+		<title>loading</title>
+	</head>
+	<body>
+	</body>
+	<script src="../../scripts/common/custom-function.js"></script>
+	<script src="scripts/common/baiduScript.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$.ajax({
+                url: '/api/payment-recharge/recharge-commit',
+                data:JSON.stringify({
+                	"userId":storage.get("userId"),
+                    "amount":getUrlParam().amount
+                }),
+                type : "POST",
+                contentType: "application/json; charset=utf-8",
+                dataType : "JSON",
+                success : function(data){
+                	var paymentChannelCode = data.paymentChannelCode;
+                	var transId = data.transId;
+                	var htmlText = data.htmlText;
+                	
+					var form = htmlText.indexOf('<style type="text/css">');
+					var to = htmlText.indexOf('</style>')+8; 
+					var styleText =  htmlText.substring(form,to);
+					$("head").append(styleText);
+					
+					var form = htmlText.indexOf('<body');
+					var to = htmlText.indexOf('</body>'); 
+					var bodyText =  htmlText.substring(form,to);
+					$("body").append(bodyText);
+					
+					document.forwardForm.submit(); 
+                },
+                error : function(data){
+                    var e = eval('('+data.responseText+')');
+                    $("body").append(e.error.message);
+                }
+        	});
+			
+		})
+	</script>
+</html>
+
+
