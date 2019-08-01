@@ -1,4 +1,5 @@
-/node_modules
-.DS_Store
-dist_master/
 *.zip
+.DS_Store
+node_modules/
+dist/
+npm-debug.log*
