@@ -1,11 +1,12 @@
 var Vue = require("vue");
 var C = require("common");
 var $ = require("jquery");
-var BaiduScript = require("baiduScript");
 
 var index_vm = new Vue({
   el: '#user-register-container',
   data: {
+    sendTxt: '发送验证码',
+    isAgreement: false,
     imgApiUrl: '/api/auth/register/img-captcha',
     sendSmsUrl: '/api/auth/register/sms-captcha',
     checkImgCodeUrl: '/api/auth/register/img-captcha/verify',
@@ -16,7 +17,6 @@ var index_vm = new Vue({
     smsValue: null,
     mobile: null,
     password: null,
-    sendTxt: '发送',
     disableAttr: false,
     type: 'password',
     bgStatus: true,
@@ -173,11 +173,8 @@ var index_vm = new Vue({
     }
   },
   mounted: function() {
-    this.getImgCode();
     var param = C.getUrlParam();
     this.inviteCode = param.inviteCode || '';
     this.fromChannel = param.fromChannel || '';
-    $(".form-bind-wechat").hide();
-    //document.getElementById("checkbox-10-1").checked = true;
   }
 });
