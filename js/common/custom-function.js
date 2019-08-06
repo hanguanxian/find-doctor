@@ -1,4 +1,5 @@
- 	var $ = require("jquery");
+	 var $ = require("jquery");
+	 require("lib-flexible");
  	var jq_cookie = require("jq-cookie");
  	/*-----------------------------微信登录函数-------------------------------*/
  	function doWechatTokenLogin(wechatLoginCallback) {

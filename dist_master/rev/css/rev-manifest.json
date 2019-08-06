@@ -1,7 +1,7 @@
 {
   "activities/activities.module.css": "activities/activities-a8e926a009.module.css",
   "activities/test.css": "activities/test-ae904bd600.css",
-  "base.css": "base-2d86f7d6c5.css",
+  "base.css": "base-b0a112ffdd.css",
   "commom.css": "commom-611583b790.css",
   "contract/contract.css": "contract/contract-5ed2a8834d.css",
   "freeLunch/freeLunch.css": "freeLunch/freeLunch-3b35d4711e.css",
@@ -21,5 +21,5 @@
   "root.css": "root-c89e6000b9.css",
   "shortTerm_fixed_charge/shortTerm_fixed_charge.css": "shortTerm_fixed_charge/shortTerm_fixed_charge-9b1111aac0.css",
   "swiper.min.css": "swiper-c779748a2c.min.css",
-  "user/user.module.css": "user/user-eb78c54fbe.module.css"
+  "user/user.module.css": "user/user-c159d5c4ab.module.css"
 }

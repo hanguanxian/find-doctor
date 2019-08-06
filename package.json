@@ -23,6 +23,7 @@
         "gulp-less": "^3.3.0",
         "gulp-minify-css": "^1.2.4",
         "gulp-postcss": "^8.0.0",
+        "gulp-px2rem-plugin": "^0.4.0",
         "gulp-rename": "^1.2.2",
         "gulp-rev": "^7.1.2",
         "gulp-rev-collector": "^1.1.1",
@@ -48,6 +49,7 @@
     },
     "dependencies": {
         "gulp": "^3.9.1",
+        "lib-flexible": "^0.3.2",
         "qrcode": "^0.8.2"
     },
     "repository": {
