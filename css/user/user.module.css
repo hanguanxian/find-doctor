@@ -66,6 +66,7 @@
 .user-common-container .sendBtn-disabled-Bg{
     background:#c8c9ca!important;
     color: #333333;
+    border: none;
 }
 
 .user-common-container .form-agreement{
@@ -100,6 +101,21 @@
 }
 .user-common-container .tips {
     text-align: center;
-    color: #787878;
     font-size: 28px;
+    margin-top: 54px;
+}
+.user-common-container .tips a {
+    color: #787878;
+}
+.user-common-container a.doctor-reg {
+    color: #00bc71;
+}
+.platform-article {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background-color: #fff;
+    top: 0;
+    height: 100%;
+    overflow: scroll;
 }

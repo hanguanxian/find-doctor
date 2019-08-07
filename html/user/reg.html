@@ -24,7 +24,7 @@
             </div>
             <div class="form-input-box">
                 <label class="form-label"><img src="../../img/login-mscode.png" alt="" class="full-img"></label>
-                <input class="msgCode" type="text" placeholder="短信验证码" style="text-indent: 9rem;" v-model="smsValue">
+                <input class="msgCode" type="text" placeholder="短信验证码" v-model="smsValue">
                 <button id="sendBtn" class="sendBtn" v-bind:class="{ 'sendBtn-default-Bg': bgStatus, 'sendBtn-disabled-Bg': !bgStatus}" v-on:click="sendSms" v-bind="{ disabled: disableAttr}" v-html="sendTxt" disabled="true"></button>
             </div>
             <div class="form-agreement">
@@ -32,13 +32,22 @@
                     <span class="form-agreement-img no-agreement" v-if="!isAgreement" @click="isAgreement=true"></span>
                     <img v-else src="../../img/login-agree.png" alt="" class="form-agreement-img" @click="isAgreement=false">
                     <span>点击提交即表示同意</span>
-                    <a href="javascript:;" class="platformContract" @click="showContract">《用户服务协议》</a>
+                    <a href="javascript:;" class="platformContract" @click="maskShow=true">《用户服务协议》</a>
                 </p>
             </div>
-            <button id="regBtn" class="regBtn" v-on:click="verifiyCode" disabled="true">确认注册</button>
+            <button id="regBtn" class="regBtn" >确认注册</button>
+            <div class="tips">
+                <a class="doctor-reg" href="#">医生注册</a>
+                <a href="#">| 忘记密码</a>
+            </div>
         </section>
-        <div id="maskBg" class="maskBg" v-show="maskShow"></div>
+        <article class="platform-article" v-if="maskShow" @click="maskShow=false">
+            <p>23423423</p>
+            <p>23423423</p>
+            <p>点击关闭</p>
+        </article>
     </article>
+    
     <script src="../../js/user/reg.js"></script>
 </body>
 
