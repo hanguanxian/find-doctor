@@ -67,8 +67,6 @@ gulp.task('browserify', function() {
 		    });
 	    }))
 	    .pipe(uglify()) // uglify
-	    //.pipe(sourcemaps.init({loadMaps: true}))
-	    //.pipe(sourcemaps.write("."))
 	    .pipe(rev())
 	    .pipe(gulp.dest(config.dist_js))
 	    .pipe(rev.manifest())

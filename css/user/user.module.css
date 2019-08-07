@@ -110,7 +110,10 @@
 .user-common-container a.doctor-reg {
     color: #00bc71;
 }
-.platform-article {
+.user-common-container .platform-contract {
+    color: #00bc71;
+}
+.overlay {
     position: absolute;
     width: 100%;
     left: 0;

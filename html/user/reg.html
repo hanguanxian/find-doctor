@@ -32,7 +32,7 @@
                     <span class="form-agreement-img no-agreement" v-if="!isAgreement" @click="isAgreement=true"></span>
                     <img v-else src="../../img/login-agree.png" alt="" class="form-agreement-img" @click="isAgreement=false">
                     <span>点击提交即表示同意</span>
-                    <a href="javascript:;" class="platformContract" @click="maskShow=true">《用户服务协议》</a>
+                    <a href="register-agreement.html" class="platform-contract">《用户服务协议》</a>
                 </p>
             </div>
             <button id="regBtn" class="regBtn" >确认注册</button>
@@ -41,11 +41,6 @@
                 <a href="#">| 忘记密码</a>
             </div>
         </section>
-        <article class="platform-article" v-if="maskShow" @click="maskShow=false">
-            <p>23423423</p>
-            <p>23423423</p>
-            <p>点击关闭</p>
-        </article>
     </article>
     
     <script src="../../js/user/reg.js"></script>
