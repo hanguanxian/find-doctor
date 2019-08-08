@@ -6,4 +6,5 @@ gulp build -p master
 gulp build -p product
 
 html/user/reg.html 注册
-register-agreement.html  注册-用户协议
+html/user/register-agreement.html  注册-用户协议
+html/asset-index.html//个人中心

@@ -1,0 +1,17 @@
+.asset-index-container {
+    background-color: #f3f3f3;
+    min-height: 100vh;
+}
+.page-top {
+    padding: 55px 44px;
+    background-color: #fff;
+}
+.page-top .avatar {
+    width: 95px;
+}
+.page-top .username {
+    padding-left: 40px;
+    color: black;
+    line-height: 95px;
+    font-size: 30px;
+}

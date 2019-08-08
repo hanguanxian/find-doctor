@@ -1,6 +1,6 @@
 var Vue = require("vue");
-var C = require("common");
 var $ = require("jquery");
+var C = require("common");
 
 var index_vm = new Vue({
   el: '#user-register-container',
