@@ -1,0 +1,96 @@
+.page-tabs {
+    border-bottom: 1px solid #ececec;
+    padding-top: 30px;
+}
+.page-tabs .tab {
+    font-size: 30px;
+    color: #787878;
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+}
+.page-tabs .tab-icon {
+    width: 33px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.page-tabs .tab-border {
+    width: 70%;
+    margin: 30px auto 0;
+    height: 2px;
+    background-color: #00bc71;
+}
+.doctor {
+    border-bottom: 1px solid #ececec;
+    padding: 54px 27px 36px;
+    color: #9a9a9a;
+    font-size: 24px;
+}
+.doctor .doctor-avatar {
+    width: 180px;
+}
+.doctor-contnt {
+    padding-left: 28px;
+}
+.doctor-name {
+    font-size: 31px;
+    color: #333333;
+}
+.doctor-name span {
+    color: #00bc71;
+    display: inline-block;
+    font-size: 24px;
+    background-color: #dbeee4;
+    padding: 6px 10px;
+    vertical-align: bottom;
+    margin-left: 14px;
+}
+.doctor-name span.free {
+    background-color: #f8e6e0;
+    color: #ff7444;
+}
+.doctor .doctor-job {
+    color: #333333;
+    margin: 11px 0;
+}
+.doctor .hospital {
+    margin-bottom: 18px;
+}
+.doctor .doctor-desc {
+    line-height: 36px;
+}
+.service {
+    color: #787878;
+    font-size: 24px;
+    padding-left: 28px;
+    margin-top: 54px;
+}
+.service .service-avatar {
+    width: 120px;
+}
+.service .doctortype {
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    background-color: #f5f5f5;
+}
+.service .service-contnt {
+    padding-right: 28px;
+    margin-left: 36px;
+    padding-top: 30px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #ececec;
+}
+.service .service-contnt .doctor-name {
+    color: #333333;
+    font-size: 28px;
+    margin-right: 28px;
+}
+.service .service-time {
+    color: #333333;
+    margin-top: 28px;
+}
+.service .patient-desc {
+    margin-left: 10px;
+    display: inline-block;
+}

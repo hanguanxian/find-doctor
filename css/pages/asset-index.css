@@ -1,6 +1,7 @@
 .asset-index-container {
     background-color: #f3f3f3;
     min-height: 100vh;
+    font-size: 28px;
 }
 .page-top {
     padding: 55px 44px;
@@ -14,4 +15,57 @@
     color: black;
     line-height: 95px;
     font-size: 30px;
+}
+.page-top .user-detail {
+    font-size: 28px;
+    line-height: 95px;
+}
+.arrow-right {
+    margin-left: 10px;
+}
+.page-main {
+    background-color: #fff;
+    padding-left: 27px;
+    margin-top: 18px;
+}
+.page-main .title {
+    color: #333;
+    border-bottom: 1px solid #ececec;
+    height: 80px;
+    line-height: 80px;
+}
+.page-main .service {
+    text-align: center;
+    color: #787878;
+    display: block;
+    flex-grow: 1;
+    padding-bottom: 36px;
+}
+.page-main .service .service-icon-wrap {
+    padding: 27px 60px;
+}
+.line-list .line {
+    position: relative;
+}
+.line-list .line .line-img {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    margin-top: 26px;
+    margin-right: 27px;
+}
+.line-list .line .line-msg {
+    flex-grow: 1;
+    color: #333333;
+    height: 87px;
+    line-height: 87px;
+    border-bottom: 1px solid #ececec;
+}
+.line-list .line .arrow-right {
+    position: absolute;
+    right: 28px;
+    top: 32px;
+}
+.line-list .line:last-child .line-msg {
+    border-bottom: none;
 }

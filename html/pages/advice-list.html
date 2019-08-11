@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta name="format-detection" content="telephone=no">
+  <title>咨询列表</title>
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/pages/advice-list.css">
+</head>
+
+<body>
+  <section class="advice-list-container page-container" id="advice-list-container" v-cloak>
+    <div class="page-tabs flex-wrap">
+      <div class="tab" @click="tab1Flag=true"> 
+          <img class="tab-icon" v-if="tab1Flag" src="../../img/advice-doctor2.png" >
+          <img class="tab-icon" v-else src="../../img/advice-doctor.png" >
+          <span class="tab-name flex-grow1">我的医生</span>
+          <div class="tab-border" v-if="tab1Flag"></div>
+      </div>
+      <div class="tab"@click="tab1Flag=false"> 
+          <img class="tab-icon" v-if="tab1Flag" src="../../img/advice-mine.png" >
+          <img class="tab-icon" v-else src="../../img/advice-mine2.png" >
+          <span class="tab-name flex-grow1">我的咨询</span>
+          <div class="tab-border" v-if="!tab1Flag"></div>
+      </div>
+    </div>
+    <div class="page-main">
+      <div class="doctor-list" v-if="tab1Flag"> 
+        <a class="doctor flex-wrap" href="#" v-for="doctor in doctorList">
+          <div class="doctor-avatar">
+              <img class="full-img" src="../../img/avatar.png" >
+          </div>
+          <div class="doctor-contnt flex-grow1">
+            <div class="doctor-name">
+              {{doctor.name}}
+              <span v-if="doctor.serviceType == 1">图文咨询</span>
+              <span v-else class="free">免费咨询</span>
+            </div>
+            <div class="doctor-job">{{doctor.doctorPosition}} | {{doctor.department}}</div>
+            <div class="hospital">{{doctor.hospital}}</div>
+            <div class="doctor-desc line-clamp2">{{doctor.desc}}</div>
+          </div>
+        </a>
+      </div>
+      <div class="service-list" v-else> 
+          <a class="service flex-wrap" href="#" v-for="item in services">
+            <div class="service-avatar">
+                <img class="full-img" src="../../img/doctor.png" >
+                <div class="doctortype">{{item.doctortype}}</div>
+            </div>
+            <div class="service-contnt flex-grow1">
+              <div class="service-info flex-wrap">
+                <span class="doctor-name">{{item.doctor}}</span>
+                <span class="flex-grow1">患者：{{item.patient}}</span>
+                <span>{{item.state}}</span>
+              </div>
+              <div class="flex-wrap service-time">
+                <span>[{{item.date}}]</span>
+                <span class="flex-grow1 patient-desc line-clamp">{{item.desc}}</span>
+              </div>
+            </div>
+          </a>
+        </div>
+    </div>
+    
+  </section>
+  <script src="../../js/pages/advice-list.js"></script>
+</body>
+
+</html>
