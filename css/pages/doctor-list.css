@@ -1,0 +1,79 @@
+.page-tabs {
+    border-bottom: 1px solid #ececec;
+    padding-top: 30px;
+}
+.page-tabs .tab {
+    font-size: 30px;
+    color: #787878;
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+}
+.page-tabs .tab-icon {
+    width: 33px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.page-tabs .tab-border {
+    width: 70%;
+    margin: 30px auto 0;
+    height: 2px;
+    background-color: #00bc71;
+}
+.doctor {
+    border-bottom: 1px solid #ececec;
+    padding: 54px 27px 36px;
+    color: #9a9a9a;
+    font-size: 24px;
+}
+.doctor .doctor-avatar {
+    width: 180px;
+}
+.doctor-contnt {
+    padding-left: 28px;
+}
+.doctor-name {
+    font-size: 28px;
+    font-weight: bolder;
+    color: #333333;
+}
+.doctor-name span {
+    font-size: 24px;
+    color: #333333;
+}
+.doctor-type span {
+    border: 2px solid #ececec;
+    display: inline-block;
+    font-size: 24px;
+    padding: 6px 14px;
+    vertical-align: bottom;
+    margin-right: 36px;
+    margin-top: 20px;
+    border-radius: 20px;
+    color: #00bc71;
+}
+.doctor-type span.free {
+    background-color: #f8e6e0;
+    color: #ff7444;
+}
+.doctor .doctor-job {
+    color: #333333;
+    margin-left: 20px;
+    display: inline-block;
+}
+.doctor .hospital {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.doctor .doctor-desc {
+    line-height: 36px;
+}
+.doctor .doctor-nums {
+    color: #666;
+    margin-top: 24px;
+}
+.doctor .doctor-nums span {
+    color: #ffae00;
+    display: inline-block;
+    margin-right: 56px;
+}

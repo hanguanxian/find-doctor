@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta name="format-detection" content="telephone=no">
+  <title>医生列表</title>
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/pages/doctor-list.css">
+</head>
+
+<body>
+  <section class="advice-list-container page-container" id="advice-list-container" v-cloak>
+    <div class="page-main">
+      <div class="doctor-list" v-if="tab1Flag"> 
+        <a class="doctor flex-wrap" href="#" v-for="doctor in doctorList">
+          <div class="doctor-avatar">
+              <img class="full-img" src="../../img/avatar.png" >
+          </div>
+          <div class="doctor-contnt flex-grow1">
+            <div class="doctor-name">
+              {{doctor.name}}
+              <span class="doctor-job">{{doctor.doctorPosition}} | {{doctor.department}}</span>
+            </div>
+            <div class="hospital">{{doctor.hospital}}</div>
+            <div class="doctor-desc line-clamp2">{{doctor.desc}}</div>
+            <div class="doctor-nums">
+                问诊量：<span>6</span> 评论量：<span>111</span>
+            </div>
+            <div class="doctor-type">
+                <span >图文咨询</span>
+                <span >名医续方</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+  </section>
+  <script src="../../js/pages/doctor-list.js"></script>
+</body>
+
+</html>
