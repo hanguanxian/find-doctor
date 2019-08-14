@@ -99,7 +99,7 @@ button{
     border: none;
     outline: 0;
 }
-.errorMsg{
+/* .errorMsg{
     color: #af5c46;
     height: 12px;
     line-height: 12px;
@@ -130,7 +130,7 @@ header span{
 header .rtLink{
     font-size:15px;
     color:#4a4a4a;
-}
+} */
 [v-cloak] {
     display: none !important;
 }
