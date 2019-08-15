@@ -11,3 +11,4 @@ html/asset-index.html//个人中心
 html/advice-list.html//咨询列表-我的咨询
 html/doctor-list.html//医生列表
 html/inquiry.html//填写问诊单
+html/take-medicine.html//05支付订单-煎服方式
