@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta name="format-detection" content="telephone=no">
+  <title>找医生</title>
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/pages/find-doctor.css">
+</head>
+
+<body>
+  <section class="find-doctor-container" id="find-doctor-container" v-cloak>
+    <div class="page-search">
+      <img class="icon-search" src="../../img/icon/search.png" >
+      <input type="text" class="search-input" placeholder="搜索不适、医生、科室等" v-model="search">
+    </div>
+    <div class="question-wrapper" v-for="(item, index) in departmentList">
+      <div class="question"><i class=""></i>{{item.department}}</div>
+      <div class="option-wrapper">
+        <div class="option" v-for="(symptom, num) in item.symptoms">
+          <span  @click="seleted(index,num)">{{symptom}}</span>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+  <script src="../../js/pages/find-doctor.js"></script>
+</body>
+
+</html>
