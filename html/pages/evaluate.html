@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta name="format-detection" content="telephone=no">
+  <title>评价</title>
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/pages/evaluate.css">
+</head>
+
+<body>
+  <section class="evaluate-container" id="evaluate-container" v-cloak>
+    <div class="page-top flex-wrap">
+      <div class="page-top-btn active">全部评价</div>
+      <div class="page-top-btn">好评</div>
+      <div class="page-top-btn">差评</div>
+    </div>
+    <div class="page-main">
+      <div class="evaluate-list" > 
+        <div class="evaluate" v-for="evaluate in evaluateList">
+          <div class="evaluate-top flex-wrap">
+              <img class="avatar" src="../../img/avatar2.png" >
+              <div class="name flex-grow1">{{evaluate.name}}</div>
+              <div class="star-wrap">
+                <template v-for="item in 5">
+                  <img class="star" v-if="item <= evaluate.star" src="../../img/icon/star.png" >
+                  <img class="star" v-else src="../../img/icon/star2.png" >
+                </template>
+              </div>
+          </div>
+          <div class="evaluate-contnt">
+            <div class="evaluate-tag">
+              <span class="tag" v-for="item2 in evaluate.tag">{{item2}}</span>
+            </div>
+            <div class="evaluate-desc line-clamp2">{{evaluate.desc}}</div>
+            <div class="evaluate-date">
+                {{evaluate.datetime}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+  <script src="../../js/pages/evaluate.js"></script>
+</body>
+
+</html>

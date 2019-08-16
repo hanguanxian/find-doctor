@@ -1,0 +1,65 @@
+body {
+    background-color: #f3f3f3;
+}
+.page-top {
+    padding: 14px 100px;
+    background-color: #fff;
+    margin-bottom: 24px;
+}
+.page-top .page-top-btn {
+    flex-grow: 1;
+    padding: 14px 30px;
+    font-size: 24px;
+    text-align: center;
+    border: 2px solid #ffb933;
+    border-radius: 60px;
+    color: #bbb;
+}
+.page-top .page-top-btn.active {
+    background-color: #ffa800;
+    color: #fff;
+}
+.page-top .page-top-btn:nth-child(2) {
+    margin: 0 36px;
+}
+
+/* evaluate start */
+.evaluate {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 27px;
+    font-size: 24px;
+    color: #5b5b5b;
+}
+.evaluate .name {
+    font-size: 26px;
+    color: #5b5b5b;
+    margin-top: 20px;
+    margin-left: 16px;
+}
+.evaluate .star {
+    display: inline-block;
+    width: 34px;
+    margin-top: 10px;
+ }
+
+.evaluate .evaluate-tag {
+    margin: 20px 0 36px;
+}
+.evaluate .tag {
+    display: inline-block;
+    padding: 10px 18px;
+    color: #fff;
+    background-color: #00bc71;
+    border-radius: 40px;
+    margin-right: 10px;
+}
+.evaluate .evaluate-desc {
+    color: #5b5b5b;
+    line-height: 48px;
+}
+.evaluate .evaluate-date {
+    color: #999999;
+    margin-top: 22px;
+}
+/* evaluate end */

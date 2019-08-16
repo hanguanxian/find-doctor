@@ -5,7 +5,6 @@ var C = require("common");
 var index_vm = new Vue({
   el: '#advice-list-container',
   data: {
-    tab1Flag: true,//tab切换
     doctorList: [{
       name:'赵医生',
       serviceType: 1,//图文咨询
