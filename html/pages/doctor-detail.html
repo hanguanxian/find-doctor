@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta name="format-detection" content="telephone=no">
+  <title>评价</title>
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/pages/doctor-detail.css">
+</head>
+
+<body>
+  <section class="doctor-detail-container" id="doctor-detail-container" v-cloak>
+    <div class="page-top">
+        <img class="doctor-avatar" src="../../img/avatar.png" >
+        <div class="doctor-name">赵某某</div>
+        <div class="doctor-position">主任医师</div>
+        <div class="doctor-hospital">皮肤科  合肥市蜀山区XX医院</div>
+        <div class="doctor-info">
+          <img class="doctor-info-icon" src="../../img/icon/question.png" >
+          <span class="">问诊量: 6</span>
+          <img class="doctor-info-icon" src="../../img/icon/good.png" >
+          <span class="">好评率: 100%</span>
+          <img class="doctor-info-icon" src="../../img/icon/heart.png" >
+          <span class="">关注量: 6</span>
+        </div>
+        <div class="doctor-follow">
+            <img class="add" src="../../img/icon/add.png" >
+            <span class="">关注</span>
+        </div>
+    </div>
+    <div class="flex-wrap advice-list">
+      <div class="advice">
+          <img class="advice-icon" src="../../img/icon/email.png" >
+          <div class="advice-title">图文咨询</div>
+          <div class="advice-desc">专家为您在线回复</div>
+          <div class="advice-price"><span>20.00</span>元/次</div>
+      </div>
+      <div class="advice">
+          <img class="advice-icon" src="../../img/icon/mobile.png" >
+          <div class="advice-title">电话咨询</div>
+          <div class="advice-desc">专家为您在线回复</div>
+          <div class="advice-price"><span>50.00</span>元/次</div>
+      </div>
+      <div class="advice">
+          <img class="advice-icon" src="../../img/icon/contract.png" >
+          <div class="advice-title">在线续方</div>
+          <div class="advice-desc">专家为您在线回复</div>
+          <div class="advice-price"><span>40.00</span>元/次</div>
+      </div>
+    </div>
+
+    <div class="doctor-line-wrap">
+      <div class="doctor-line flex-wrap" @click="fold1=!fold1">
+          <img class="line-icon" src="../../img/icon/detail-notice.png" >
+          <div class="line-title flex-grow1">医生公共</div>
+          <div class="arrow-down" v-if="fold1"></div>
+          <div class="arrow-up" v-else></div>
+      </div>
+      <div class="line-content" :class="{'line-clamp2':fold1}">
+          各位患者大家好，赵医生从7月4日-7月8日因工作需要出差，在此期间咨询暂时停诊。7月9日恢复每天9:00-11:00时间段回复患者咨询。望患者理解，谢谢！
+      </div>
+    </div>
+    <div class="doctor-line-wrap">
+      <div class="doctor-line flex-wrap" @click="fold2=!fold2">
+          <img class="line-icon" src="../../img/icon/detail-man.png" >
+          <div class="line-title flex-grow1">医生简介</div>
+          <div class="arrow-down" v-if="fold2"></div>
+          <div class="arrow-up" v-else></div>
+      </div>
+      <div class="line-content" :class="{'line-clamp2':fold2}">
+          各位患者大家好，赵医生从7月4日-7月8日因工作需要出差，在此期间咨询暂时停诊。7月9日恢复每天9:00-11:00时间段回复患者咨询。望患者理解，谢谢！
+      </div>
+    </div>
+    <div class="doctor-line-wrap">
+      <div class="doctor-line flex-wrap" @click="fold3=!fold3">
+          <img class="line-icon" src="../../img/icon/detail-heart.png" >
+          <div class="line-title flex-grow1">医生擅长</div>
+          <div class="arrow-down" v-if="fold3"></div>
+          <div class="arrow-up" v-else></div>
+      </div>
+      <div class="line-content" :class="{'line-clamp2':fold3}">
+          各位患者大家好，赵医生从7月4日-7月8日因工作需要出差，在此期间咨询暂时停诊。7月9日恢复每天9:00-11:00时间段回复患者咨询。望患者理解，谢谢！
+      </div>
+    </div>
+    <div class="page-main doctor-line-wrap">
+      <div class="doctor-line flex-wrap" style="background-color: #fff;">
+          <img class="line-icon" src="../../img/icon/icon-msg2.png" >
+          <div class="line-title flex-grow1">患者评价</div>
+          <div class="judge">全部评价</div>
+          <div class="arrow-right"></div>
+      </div>
+      <div class="evaluate-list" > 
+        <div class="evaluate" v-for="evaluate in evaluateList">
+          <div class="evaluate-top flex-wrap">
+              <img class="avatar" src="../../img/avatar2.png" >
+              <div class="name flex-grow1">{{evaluate.name}}</div>
+              <div class="star-wrap">
+                <template v-for="item in 5">
+                  <img class="star" v-if="item <= evaluate.star" src="../../img/icon/star.png" >
+                  <img class="star" v-else src="../../img/icon/star2.png" >
+                </template>
+              </div>
+          </div>
+          <div class="evaluate-contnt">
+            <div class="evaluate-tag">
+              <span class="tag" v-for="item2 in evaluate.tag">{{item2}}</span>
+            </div>
+            <div class="evaluate-desc line-clamp2">{{evaluate.desc}}</div>
+            <div class="evaluate-date">
+                {{evaluate.datetime}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+  <script src="../../js/pages/doctor-detail.js"></script>
+</body>
+
+</html>
