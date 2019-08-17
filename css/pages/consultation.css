@@ -1,0 +1,114 @@
+
+.patient-wrap {
+    background-color: #fff;
+    margin-bottom: 18px;
+    padding: 32px 27px;
+    font-size: 26px;
+}
+.patient-name {
+    color: #333333;
+}
+.patient {
+    color: #999999;
+    text-align: right;
+}
+.arrow {
+    width: 14px;
+    display: inline-block;
+    margin-left: 10px;
+}
+.consultation-content {
+    padding: 30px 27px 43px;
+    background-color: #fff;
+    margin-bottom: 18px;
+}
+.consultation-tips {
+    font-size: 26px;
+    color: #333333;
+}
+.consultation {
+    width: 100%;
+    display: block;
+    height: 287px;
+    border: 2px solid #f3f3f3;
+    margin-top: 43px;
+    border-radius: 6px;
+}
+.upload-wrap {
+    padding: 30px 27px 45px;
+    background-color: #fff;
+    margin-bottom: 18px;
+}
+.upload-tips {
+    font-size: 26px;
+    color: #333333;
+    margin-bottom: 40px;
+}
+.upload-wrap .uploaded {
+    width: 174px;
+    position: relative;
+    display: inline-block;
+}
+.upload-wrap .cancel {
+    position: absolute;
+    top: -12px;
+    right: 12px;
+    width: 36px;
+}
+.btn-upload {
+    width: 174px;
+    text-align: center;
+    border: 2px dotted #ccc;
+    display: inline-block;
+    padding-bottom: 40px;
+    vertical-align: bottom;
+}
+.btn-upload .camera {
+    width: 55px;
+    display: block;
+    margin: 35px auto 8px;
+}   
+.btn-upload span {
+    font-size: 26px;
+    color: #a9a9a9;
+}
+
+.submit-wrap {
+    background-color: #fff;
+    padding: 40px 0 30px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.submit-wrap .email {
+    width: 66px;
+    display: inline-block;
+    margin-left: 27px;
+    margin-right: 44px;
+}
+.center {
+    flex-grow: 1;
+    color: #c9c9c9;
+    font-size: 24px;
+}
+.center .line1 {
+    font-size: 28px;
+    color: #333333;
+    margin-bottom: 36px;
+}
+.center .price {
+    color: #ffae00;
+    display: inline-block;
+    margin-left: 33px;
+}
+.btn-submit {
+    width: 160px;
+    text-align: center;
+    font-size: 26px;
+    color: #fff;
+    height: 56px;
+    line-height: 56px;
+    background-color: #00bc71;
+    border-radius: 10px;
+    margin-right: 27px;
+}

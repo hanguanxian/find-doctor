@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta name="format-detection" content="telephone=no">
+  <title>在线咨询</title>
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/pages/consultation.css">
+</head>
+
+<body>
+  <section class="consultation-container" id="consultation-container" v-cloak>
+    <div class="patient-wrap flex-wrap">
+      <div class="patient-name">就诊人</div>
+      <div class="flex-grow1 patient">王某某</div>
+      <img src="../../img/arrow-right.png" class="arrow">
+    </div>
+    <div class="consultation-content">
+      <div class="consultation-tips">问诊内容</div>
+      <textarea class="consultation"></textarea>
+    </div>
+    <div class="upload-wrap">
+      <div class="upload-tips">添加图片</div>
+      <div class="uploaded">
+        <img class="full-img" src="../../img/advice-mine.png" />
+        <img class="cancel" src="../../img/cancel.png" />
+      </div>
+      <div class="btn-upload">
+          <img class="camera" src="../../img/camera.png" />
+          <span>1/2</span>
+      </div>
+    </div>
+    <div class="flex-wrap submit-wrap">
+      <img class="email" src="../../img/icon/email.png" />
+      <div class="center">
+        <div class="line1">
+          <span>图文咨询</span><span class="price">¥20.00</span>
+        </div>
+        <div class="">图文沟通，可开建议方</div>
+      </div>
+      <div class="btn-submit">立即咨询</div>
+    </div>
+  </section>
+  <script src="../../js/pages/consultation.js"></script>
+</body>
+
+</html>
