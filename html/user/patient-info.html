@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="format-detection" content="telephone=no">
+    <title>就诊人信息</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/user/patient-info.css">
+</head>
+
+<body>
+    <article class="patient-info-container" id="patient-info-container" v-cloak>
+        <section class="content">
+            <div class="avatar-wrap">
+                <img src="../../img/patient-default.png" alt="" class="avatar">
+                <div class="btn-upload">点击上传头像</div>
+            </div>
+            <div class="form-input-box">
+                <label class="form-label">姓名<span>*</span></label>
+                <input class="input" type="text" placeholder="输入真实姓名" >
+            </div>
+            <div class="form-input-box">
+                <label class="form-label">性别<span>*</span></label>
+                <input class="input" type="text" readonly placeholder="请选择" >
+                <img src="../../img/arrow-right.png" class="arrow">
+            </div>
+            <div class="form-input-box">
+                <label class="form-label">手机号码<span>*</span></label>
+                <input class="input" type="tel" placeholder="输入手机号码" maxlength="11" >
+            </div>
+            <div class="form-input-box">
+                <label class="form-label">证件类型<span>*</span></label>
+                <input class="input" type="text" readonly placeholder="选择证件类型" >
+                <img src="../../img/arrow-right.png" class="arrow">
+            </div>
+            <div class="form-input-box">
+                <label class="form-label">证件号码<span>*</span></label>
+                <input class="input" type="text" placeholder="输入证件号码" >
+            </div>
+            <div class="form-input-box">
+                <label class="form-label">出生年月<span>*</span></label>
+                <input class="input" type="text" readonly placeholder="输入出生年月" >
+                <img src="../../img/arrow-right.png" class="arrow">
+            </div>
+            <div class="form-input-box">
+                <label class="form-label">关系<span>*</span></label>
+                <input class="input" type="text" readonly placeholder="输入证件号码">
+                <img src="../../img/arrow-right.png" class="arrow">
+            </div>
+            <div class="form-input-box">
+                <label class="form-label">设为默认就诊人</label>
+                <div class="switch-placeholder"></div>
+                <div class="switch" :class="{'close': !switchOpen}" @click="switchOpen = !switchOpen">
+                    <label></label>
+                </div>
+            </div>
+        </section>
+        <div class="btn-submit" >保存</div>
+    </article>
+    
+    <script src="../../js/user/patient-info.js"></script>
+</body>
+
+</html>

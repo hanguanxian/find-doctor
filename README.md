@@ -15,3 +15,4 @@ html/take-medicine.html//05支付订单-煎服方式
 html/find-doctor.html//01找医生
 html/evaluate.html//评价
 html/doctor-detail.html//医生详情
+user/patient-info.html//就诊人信息

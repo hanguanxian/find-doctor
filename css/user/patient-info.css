@@ -1,0 +1,84 @@
+.content {
+    background-color: #ffffff;
+    padding: 36px 25px 0;
+}
+.avatar-wrap {
+    text-align: center;
+    margin-bottom: 56px;
+}
+.avatar-wrap .avatar {
+    width: 108px;
+    margin: 36px auto;
+    display: block;
+}
+
+.avatar-wrap .btn-upload {
+    font-size: 24px;
+    color: black;
+    display: inline-block;
+    padding: 11px 8px;
+    border-radius: 10px;
+    border: 2px solid #ffa800
+}
+.form-input-box {
+    border-bottom: 2px solid #ececec;
+    font-size: 26px;
+    color: #333;
+    padding: 28px 0;
+    display: flex;
+}
+.form-label{
+    display: inline-block;
+    width: 200px;
+    line-height: 44px;
+}
+.form-label span {
+    color: #d41919;
+}
+.input {
+    flex-grow: 1;
+}
+.arrow {
+    width: 24px;
+    transform: scale(.8);
+}
+.btn-submit {
+    width: 73%;
+    height: 86px;
+    line-height: 86px;
+    text-align: center;
+    margin: 72px auto;
+    color: #fff;
+    background-color: #00bc71;
+    font-size: 33px;
+}
+.switch-placeholder {
+    height: 2px;
+    flex-grow: 1;
+}
+.switch {
+    position: relative;
+    width: 86px;
+    height: 54px;
+    border-radius: 50px;
+    background-color: #00bc71;
+    border: 4px solid #00bc71;
+}
+.switch label {
+    border-radius: 200px;
+    width: 42px;
+    height: 42px;
+    background-color: #fff;
+    position: absolute;
+    border: 4px solid #fff;
+    right: 6px;
+    top: 2px;
+}
+.switch.close {
+    background-color: #fff;
+    border: 4px solid #ececec;
+}
+.switch.close label {
+    left: 6px;
+    border: 4px solid #ececec;
+}
