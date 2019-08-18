@@ -21,5 +21,7 @@ html/medicine-orders.html//用药订单
 html/addr-list.html//常用地址
 html/my-patiens.html//我的就诊人
 html/appraises.html//个人中心-评价列表
+html/submit-appraise.html//我的评价
+html/buy-advice.html//购买图文咨询
 
 
