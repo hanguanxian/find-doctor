@@ -1,0 +1,61 @@
+.page-top, .appraise-content, .textarea-wrap {
+    background-color: #fff;
+    padding: 0 26px;
+    border-bottom: 2px solid #ececec;
+    color: #333333;
+    font-size: 28px;
+}
+.title {
+    padding: 36px 0;
+    font-weight: bolder;
+}
+.stars-wrap {
+    padding-bottom: 36px;
+}
+.star {
+    width: 40px;
+    vertical-align: middle;
+}
+.star-text {
+    display: inline-block;
+    margin-left: 26px;
+}
+.tag-wrap {
+    margin-bottom: 10px;
+}
+.tag {
+    color: #333333;
+    font-size: 28px;
+    display: inline-block;
+    padding: 16px 23px;
+    background-color: #f5f5f5;
+    border-radius: 50px;
+    margin-right: 27px;
+    margin-bottom: 27px;
+}
+.appraise {
+    width: 95%;
+    display: block;
+    height: 160px;
+    border: 2px solid #f3f3f3;
+    border-radius: 6px;
+    padding: 27px 18px;
+    margin-bottom: 36px;
+}
+.tips {
+    font-size: 24px;
+    color: #999999;
+    text-align: center;
+    margin-top: 36px;
+    line-height: 40px;
+}
+.btn-submit {
+    width: 73.3%;
+    margin: 75px auto 50px;
+    text-align: center;
+    font-size: 34px;
+    color: #fff;
+    height: 86px;
+    line-height: 86px;
+    background-color: #00bc71;
+}

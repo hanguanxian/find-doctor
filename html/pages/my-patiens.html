@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta name="format-detection" content="telephone=no">
+  <title>常用地址</title>
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/pages/my-patiens.css">
+</head>
+
+<body>
+  <section class="addr-container" id="addr-container" v-cloak>
+      <div class="addr-list" > 
+        <a class="addrs flex-wrap" href="#" v-for="(addr,index) in addrList">
+          <div class="addr-contnt flex-grow1">
+            <div class="addr-line">
+              <span class="addr-name">王某某</span>
+              <span class="default" v-if="index==0">(默认)</span>
+            </div>
+            <div class="addr-num">
+                340***********7812
+            </div>
+          </div>
+          <div class="btn-edit">编辑</div>
+          <img src="../../img/arrow-right.png" class="arrow">
+        </a>
+      </div>
+      <div class="btn-add">添加</div>
+  </section>
+  <script src="../../js/pages/my-patiens.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta name="format-detection" content="telephone=no">
+  <title>医生列表</title>
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/pages/medicine-orders.css">
+</head>
+
+<body>
+  <section class="medicine-orders-container" id="medicine-orders-container" v-cloak>
+      <div class="orders-list" > 
+        <a class="orders" href="#" v-for="orders in ordersList">
+          <div class="order-top flex-wrap">
+              <img class="icon-click" src="../../img/icon/click.png" >
+              <div class="order-date">2019年7月12日</div>
+              <div class="order-state">已付款</div>
+          </div>
+          <div class="orders-contnt flex-grow1">
+            <div class="orders-info">
+                医生：赵某某 / 患者：王某某
+            </div>
+            <div class="orders-info">
+                订单编号：G15612880045743275
+            </div>
+            <div class="orders-info">
+                药品：草药3味
+            </div>
+            <div class="orders-info">
+                总价：<span class="price">￥6</span> 
+            </div>
+            <div class="btn-state">
+              再开一次
+            </div>
+          </div>
+        </a>
+      </div>
+  </section>
+  <script src="../../js/pages/medicine-orders.js"></script>
+</body>
+
+</html>

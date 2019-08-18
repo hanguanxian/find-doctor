@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta name="format-detection" content="telephone=no">
+  <title>在线咨询</title>
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/pages/submit-appraise.css">
+</head>
+
+<body>
+  <section class="appraise-container" id="appraise-container" v-cloak>
+    <div class="page-top">
+      <div class="title">为本次看病进行评价</div>
+      <div class="stars-wrap">
+          <template v-for="item in 5">
+            <img class="star" v-if="item <= stars" src="../../img/icon/little-star.png" >
+            <img class="star" v-else src="../../img/icon/little-star2.png" >
+          </template>
+          <span class="star-text">请打分</span>
+      </div>
+    </div>
+    <div class="appraise-content">
+      <div class="title">医生印象</div>
+      <div class="tag-wrap">
+        <span class="tag">耐心讲解</span>
+        <span class="tag">没解决疾病问题</span>
+        <span class="tag">专业知识扎实</span>
+        <span class="tag">有经验</span>
+        <span class="tag">服务态度好</span>
+      </div>
+    </div>
+    <div class="textarea-wrap">
+      <div class="title">详细描述</div>
+      <textarea class="appraise" placeholder="感谢或者提建议，给其他病友们分享就医经验等"></textarea>
+    </div>
+    <div class="submit-wrap">
+      <div class="tips">请您客观描述您看病的经历，确认内容真实，<br/>需要对自己的言论负责。</div>
+      <div class="btn-submit">提交</div>
+    </div>
+  </section>
+  <script src="../../js/pages/submit-appraise.js"></script>
+</body>
+
+</html>

@@ -17,3 +17,9 @@ html/evaluate.html//评价
 html/doctor-detail.html//医生详情
 user/patient-info.html//就诊人信息
 html/consultation.html//在线咨询
+html/medicine-orders.html//用药订单
+html/addr-list.html//常用地址
+html/my-patiens.html//我的就诊人
+html/appraises.html//个人中心-评价列表
+
+

@@ -1,0 +1,43 @@
+.orders {
+    font-size: 28px;
+    color: #787878;
+    display: block;
+    margin-bottom: 18px;
+    background-color: #fff;
+}
+.order-top {
+    border-bottom: 2px solid #ececec;
+    padding: 20px 0;
+}
+.icon-click {
+    width: 30px;
+    margin-left: 28px;
+}
+.order-date {
+    color: #333333;
+    margin-left: 10px;
+    flex-grow: 1;
+}
+.order-state {
+    color: #ffae00;
+    margin-right: 28px;
+}
+.orders-contnt {
+    padding: 28px;
+    position: relative;
+}
+.orders-info {
+    margin-bottom: 28px;
+}
+.orders-info .price {
+    color: #ffae00;
+}
+.btn-state {
+    position: absolute;
+    bottom: 18px;
+    right: 28px;
+    color: #333333;
+    border: 2px solid #333333;
+    padding: 14px;
+    border-radius: 10px;
+}

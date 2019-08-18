@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta name="format-detection" content="telephone=no">
+  <title>医生列表</title>
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/pages/appraises.css">
+</head>
+
+<body>
+  <section class="appraises-container" id="appraises-container" v-cloak>
+      <div class="orders-list" > 
+        <a class="orders" href="#" v-for="orders in ordersList">
+          <div class="page-title">诊后评价提醒</div>
+          <div class="orders-contnt flex-grow1">
+            <div class="orders-info">
+                您的评价是病友们求医路上的指路灯，会给病友们提供帮助，也是给医生们最好的感谢与反馈。
+            </div>
+            <div class="orders-info">
+                医院：合肥市蜀山区XX医院
+            </div>
+            <div class="orders-info">
+                医生：赵某某
+            </div>
+          </div>
+          <div class="order-bottom">
+              <span>查看全文</span>
+              <img src="../../img/arrow-right.png" class="arrow">
+          </div>
+        </a>
+      </div>
+  </section>
+  <script src="../../js/pages/appraises.js"></script>
+</body>
+
+</html>

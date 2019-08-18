@@ -1,0 +1,35 @@
+.orders {
+    font-size: 26px;
+    color: #787878;
+    display: block;
+    margin: 0 28px 18px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.page-title {
+    border-bottom: 2px solid #ececec;
+    padding: 27px 13px;
+    font-size: 28px;
+    color: #333333;
+}
+.orders-contnt {
+    padding: 20px 13px;
+    position: relative;
+    border-bottom: 2px solid #ececec;
+}
+.orders-info {
+    line-height: 40px;
+}
+.orders-info .price {
+    color: #ffae00;
+}
+.order-bottom {
+    text-align: right;
+    font-size: 26px;
+    color: #999;
+    padding: 20px;
+}
+.arrow {
+    width: 20px;
+    vertical-align: sub;
+}
