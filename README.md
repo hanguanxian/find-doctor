@@ -23,5 +23,6 @@ html/my-patiens.html//我的就诊人
 html/appraises.html//个人中心-评价列表
 html/submit-appraise.html//我的评价
 html/buy-advice.html//购买图文咨询
+html/prescription.html//05支付订单-药方详情
 
 

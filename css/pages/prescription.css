@@ -1,0 +1,47 @@
+.white-bg {
+    background-color: #fff;
+}
+.avatar-wrap {
+    text-align: center;
+    font-size: 28px;
+    color: #000;
+    width: 180px;
+    padding-top: 36px;
+    padding-bottom: 107px;
+    margin: auto;
+}
+.doctor-name {
+    margin-top: 20px;
+}
+.placeholder {
+    width: 100%;
+    height: 22px;
+}
+.page-line {
+    /* border-bottom: 2px solid #ececec; */
+    background-color: #fff;
+    padding: 32px 0;
+}
+.label {
+    padding: 0 27px;
+    font-size: 26px;
+    color: #333;
+    width: 140px;
+}
+.page-line .text {
+    font-size: 26px;
+    color: #999;
+}
+
+.select.on span {
+    display: block;
+    border-radius: 200px;
+    width: 22px;
+    height: 22px;
+    background-color: #00bc71;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 12px;
+}
