@@ -1,19 +1,24 @@
-安装node npm包管理 
+安装node npm包管理 node安装8.*版本 npm随意
+
+安装下载地址 https://nodejs.org/download/release/v8.16.0/node-v8.16.0-x86.msi
 
 然后依次运行下面的 
-npm install gulp -g
 
-npm install
+npm install -g cnpm --registry=https://registry.npm.taobao.org
 
-//master 本地打包 
+cnpm install gulp -g
+
+cnpm install
+
+//master 本地打包 访问目录在 dist_master 目录下
 
 gulp build 
 
-//master release 环境打包
+//master release 环境打包 访问目录在 dist_master 或 dist_release 目录下
 
 gulp build -p master
 
-//product 生产打包
+//product 生产打包 发布文件在 dist 目录下
 
 gulp build -p product
 
