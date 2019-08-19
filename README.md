@@ -1,9 +1,15 @@
+安装node npm包管理 
+然后依次运行下面的 
+npm install gulp -g
+npm install
+
 //master 本地打包 
 gulp build 
 //master release 环境打包
 gulp build -p master
 //product 生产打包
 gulp build -p product
+
 
 html/user/reg.html 注册
 html/user/register-agreement.html  注册-用户协议
