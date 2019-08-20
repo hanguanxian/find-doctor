@@ -22,6 +22,7 @@ gulp build -p master
 
 gulp build -p product
 
+一些下拉选择组件  弹框 使用了 weui.js 具体用法参考add-address.html 和patient-info.html （需要添加样式文件和var weui = require('weui.js');）文档地址https://github.com/Tencent/weui.js/blob/master/docs/README.md
 
 html/user/reg.html 注册
 

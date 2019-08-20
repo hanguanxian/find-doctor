@@ -8,6 +8,7 @@
     <meta content="yes" name="apple-touch-fullscreen">
     <meta name="format-detection" content="telephone=no">
     <title>就诊人信息</title>
+    <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.0.1/weui.min.css">
     <link rel="stylesheet" href="../../css/base.css">
     <link rel="stylesheet" href="../../css/user/patient-info.css">
 </head>
@@ -25,7 +26,7 @@
             </div>
             <div class="form-input-box">
                 <label class="form-label">性别<span>*</span></label>
-                <input class="input" type="text" readonly placeholder="请选择" >
+                <input class="input" type="text" readonly placeholder="请选择" v-model="gender" @click="selectGender">
                 <img src="../../img/arrow-right.png" class="arrow">
             </div>
             <div class="form-input-box">
@@ -34,7 +35,7 @@
             </div>
             <div class="form-input-box">
                 <label class="form-label">证件类型<span>*</span></label>
-                <input class="input" type="text" readonly placeholder="选择证件类型" >
+                <input class="input" type="text" readonly placeholder="选择证件类型" v-model="credentialType" @click="IDType">
                 <img src="../../img/arrow-right.png" class="arrow">
             </div>
             <div class="form-input-box">
@@ -43,12 +44,12 @@
             </div>
             <div class="form-input-box">
                 <label class="form-label">出生年月<span>*</span></label>
-                <input class="input" type="text" readonly placeholder="输入出生年月" >
+                <input class="input" type="text" readonly placeholder="输入出生年月" v-model="birtyday" @click="selectBirthday">
                 <img src="../../img/arrow-right.png" class="arrow">
             </div>
             <div class="form-input-box">
                 <label class="form-label">关系<span>*</span></label>
-                <input class="input" type="text" readonly placeholder="输入证件号码">
+                <input class="input" type="text" readonly placeholder="本人">
                 <img src="../../img/arrow-right.png" class="arrow">
             </div>
             <div class="form-input-box">

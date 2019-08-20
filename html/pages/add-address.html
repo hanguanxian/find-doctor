@@ -8,6 +8,7 @@
     <meta content="yes" name="apple-touch-fullscreen">
     <meta name="format-detection" content="telephone=no">
     <title>新增地址</title>
+    <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.0.1/weui.min.css">
     <link rel="stylesheet" href="../../css/base.css">
     <link rel="stylesheet" href="../../css/pages/add-address.css">
 </head>
@@ -26,9 +27,9 @@
                 <div class="form-input-box">
                     <label class="form-label">地区</label>
                     <div class="flex-wrap">
-                        <input class="input" type="text" readonly placeholder="请选择省" >
-                        <input class="input" type="text" readonly placeholder="请选择市" >
-                        <input class="input" type="text" readonly placeholder="请选择区" >
+                        <input class="input" type="text" readonly v-model="province" placeholder="请选择省" id="province" @click="selectProvince">
+                        <input class="input" type="text" readonly v-model="city" placeholder="请选择市" @click="selectCity">
+                        <input class="input" type="text" readonly v-model="area" placeholder="请选择区" @click="selectArea">
                     </div>
                 </div>
                

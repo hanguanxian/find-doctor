@@ -49,7 +49,9 @@
     "dependencies": {
         "gulp": "^3.9.1",
         "lib-flexible": "^0.3.2",
-        "qrcode": "^0.8.2"
+        "qrcode": "^0.8.2",
+        "weui": "^2.0.1",
+        "weui.js": "^1.2.1"
     },
     "repository": {
         "type": "git",
