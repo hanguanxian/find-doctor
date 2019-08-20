@@ -1,6 +1,7 @@
 var Vue = require("vue");
 var $ = require("jquery");
 var C = require("common");
+var weui = require('weui.js');
 
 var index_vm = new Vue({
   el: "#consultation-container",
@@ -27,9 +28,22 @@ var index_vm = new Vue({
     }]
   },
   methods: {
-    seleted: function(i,j) {
+    submit: function(i,j) {
       const self = this
-      
+      weui.dialog({
+        content: '就诊人信息尚未完整，即将跳转到就诊人信息填写页面',
+        className: 'custom-classname',
+        buttons: [{
+            label: '取消',
+            type: 'default',
+            onClick: function () { alert('取消') }
+        }, {
+            label: '确定',
+            type: 'primary',
+            onClick: function () { alert('确定') }
+        }]
+    });
+    
     },
     reg: function() {
       var vm = this;

@@ -52,7 +52,7 @@
 .upload-wrap .cancel {
     position: absolute;
     top: -12px;
-    right: 12px;
+    right: -12px;
     width: 36px;
 }
 .btn-upload {
@@ -82,9 +82,11 @@
 }
 .submit-wrap .email {
     width: 66px;
+    height: 60px;
     display: inline-block;
     margin-left: 27px;
     margin-right: 44px;
+    margin-top: 20px;
 }
 .center {
     flex-grow: 1;
