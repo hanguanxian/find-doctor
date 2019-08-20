@@ -37,6 +37,11 @@ a:hover {
     text-decoration: none;
     outline: 0
 }
+input,
+select,
+textarea {
+    border: none;
+}
 html{
     /* font-size: 62.5%; */
     width: 100%;

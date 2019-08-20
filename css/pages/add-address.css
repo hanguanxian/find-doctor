@@ -1,0 +1,18 @@
+.content {
+    padding: 0 28px;
+}
+.form-input-box {
+    padding-top: 36px;
+}
+.form-input-box .form-label {
+    display: block;
+    color: #333333;
+    font-size: 26px;
+}
+.form-input-box input {
+    display: block;
+    border-bottom: 2px solid #ececec;
+    margin-top: 36px;
+    width: 100%;
+    padding-bottom: 28px;
+}
