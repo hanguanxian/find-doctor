@@ -119,10 +119,10 @@ gulp.task('css', function(){
 	var processors = [px2rem({remUnit: 75})];
   return gulp.src('css/**/*.css')
   	.pipe(postcss(processors))
-    .pipe(minifyCSS())
-    .pipe(rev())
+    // .pipe(minifyCSS())
+    // .pipe(rev())
     .pipe(gulp.dest(config.dist_css))
-    .pipe(rev.manifest())
+    // .pipe(rev.manifest())
     .pipe(gulp.dest(config.dist_rev+"/css"));
 });
 
