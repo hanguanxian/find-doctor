@@ -61,4 +61,6 @@ html/buy-advice.html//购买图文咨询
 
 html/prescription.html//05支付订单-药方详情
 
+html/add-address.html//05新增地址
+
 
