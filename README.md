@@ -64,4 +64,6 @@ html/prescription.html//05支付订单-药方详情
 
 html/add-address.html//05新增地址
 
+html/dialogue.html//04在线咨询-对话
+
 

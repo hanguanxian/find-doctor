@@ -3,15 +3,38 @@ var $ = require("jquery");
 var C = require("common");
 
 var index_vm = new Vue({
-  el: '#addr-container',
+  el: '#dialogue-container',
   data: {
-    tab1Flag: true,//tab切换
-    addrList: [{
-      price: 5.4
+    doctorAvatar: "../../img/avatar.png",
+    userAvatar: "../../img/avatar2.png",
+    dialogueList: [{
+      type: "text",
+      isMine: false,
+      content:"你好"
     },{
-      price: 5.4
+      type: "text",
+      isMine: true,
+      content:"不舒服不舒服不舒服不舒服不 舒服不舒服"
     },{
-      price: 5.4
+      type: "img",
+      isMine: true,
+      content:"https://cn.vuejs.org/images/logo.png"
+    },{
+      type: "link",
+      isMine: true,
+      content: {
+        linkImg: "https://cn.vuejs.org/images/logo.png",
+        linkTitle:"请进一步填写问诊单",
+        linkDesc:"方便我对您的病情有一个初步的判断，点击填写",
+      }
+    },{
+      type: "link",
+      isMine: true,
+      content: {
+        linkImg: "https://cn.vuejs.org/images/logo.png",
+        linkTitle:"赵某某医生的建议方",
+        linkDesc:"2019/06/24 19:06",
+      }
     }],
   },
   methods: {

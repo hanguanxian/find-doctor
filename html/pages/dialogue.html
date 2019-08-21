@@ -7,34 +7,59 @@
   <meta content="yes" name="apple-mobile-web-app-capable">
   <meta content="yes" name="apple-touch-fullscreen">
   <meta name="format-detection" content="telephone=no">
-  <title>常用地址</title>
+  <title>咨询赵某某医生</title>
   <link rel="stylesheet" href="../../css/base.css">
-  <link rel="stylesheet" href="../../css/pages/addr-list.css">
+  <link rel="stylesheet" href="../../css/pages/dialogue.css">
 </head>
 
 <body>
-  <section class="addr-container" id="addr-container" v-cloak>
-      <div class="addr-list" > 
-        <a class="addrs flex-wrap" href="#" v-for="(addr,index) in addrList">
-          <div class="addr-contnt flex-grow1">
-            <div class="addr-line">
-              <span class="addr-name">王某某</span>
-              <span class="addr-phone">15612312003</span>
+  <section class="dialogue-container" id="dialogue-container" v-cloak>
+      <div class="page-top">当前咨询患者：<span>王某某</span></div>
+      <div class="dialogue-wrapper" > 
+        <div class="tip">您已成功购买医生的咨询服务，当前咨询结束时间为</div>
+        <div class="tip-time">2019-6-25  10:46:34</div>
+        <div class="dialogues" v-for="(dialogue,index) in dialogueList">
+          <template v-if="dialogue.isMine">
+            <div class="dialogue-content tr">
+                <div class="dialog" v-if="dialogue.type === 'text'">
+                  {{dialogue.content}}
+                </div>
+                <div class="dialog" v-if="dialogue.type === 'img'">
+                    <img class="sendimg" :src="dialogue.content"/>
+                </div>
+                <div class="dialog flex-wrap" v-if="dialogue.type === 'link'">
+                    <img class="full-img" :src="dialogue.content.linkImg"/>
+                    <div class="dialog-right">
+                      <div class="dialog-title">{{dialogue.content.linkTitle}}</div>
+                      <div class="dialog-desc">{{dialogue.content.linkDesc}}</div>
+                    </div>
+                </div>
+              <img class="avatar" :src="userAvatar"/>
             </div>
-            <div class="addr-default">
-              <span class="default" v-if="index==0">默认</span>安徽省 合肥市 蜀山区 稻香村街道
-            </div>
-            <div class="addr-line">
-                安徽省合肥市蜀山区稻香村街道XX小区1号楼2608室
+          </template>
+          <template v-else>
+            <div class="dialogue-content tl">
+              <img class="avatar" :src="doctorAvatar"/>
+              <div class="dialog" v-if="dialogue.type === 'text'">
+                {{dialogue.content}}
               </div>
-          </div>
-          <div class="btn-edit">编辑</div>
-          <img src="../../img/arrow-right.png" class="arrow">
-        </a>
+              <div class="dialog" v-if="dialogue.type === 'img'">
+                  <img class="sendimg" :src="dialogue.content"/>
+              </div>
+              <div class="dialog flex-wrap" v-if="dialogue.type === 'link'">
+                  <img class="full-img" :src="dialogue.content.linkImg"/>
+                  <div class="dialog-right">
+                    <div class="dialog-title">{{dialogue.content.linkTitle}}</div>
+                    <div class="dialog-desc">{{dialogue.content.linkDesc}}</div>
+                  </div>
+              </div>
+            </div>  
+          </template>
+        </div>
       </div>
       <div class="btn-add">添加</div>
   </section>
-  <script src="../../js/pages/addr-list.js"></script>
+  <script src="../../js/pages/dialogue.js"></script>
 </body>
 
 </html>
