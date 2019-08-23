@@ -8,6 +8,7 @@
   <meta content="yes" name="apple-touch-fullscreen">
   <meta name="format-detection" content="telephone=no">
   <title>咨询赵某某医生</title>
+  <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.0.1/weui.min.css">
   <link rel="stylesheet" href="../../css/base.css">
   <link rel="stylesheet" href="../../css/pages/dialogue.css">
 </head>
@@ -18,46 +19,56 @@
       <div class="dialogue-wrapper" > 
         <div class="tip">您已成功购买医生的咨询服务，当前咨询结束时间为</div>
         <div class="tip-time">2019-6-25  10:46:34</div>
-        <div class="dialogues" v-for="(dialogue,index) in dialogueList">
-          <template v-if="dialogue.isMine">
-            <div class="dialogue-content tr">
-                <div class="dialog" v-if="dialogue.type === 'text'">
-                  {{dialogue.content}}
+        <div class="dialogues" v-for="(item,index) in dialogueList">
+            <div class="dialogue-content tr" v-if="item.isMine">
+                <div class="dialog" v-if="item.type === 'text'">
+                  {{item.content}}
                 </div>
-                <div class="dialog" v-if="dialogue.type === 'img'">
-                    <img class="sendimg" :src="dialogue.content"/>
+                <div class="dialog dialogue-img" v-if="item.type === 'img'">
+                    <img class="sendimg" :src="item.content"/>
                 </div>
-                <div class="dialog flex-wrap" v-if="dialogue.type === 'link'">
-                    <img class="full-img" :src="dialogue.content.linkImg"/>
-                    <div class="dialog-right">
-                      <div class="dialog-title">{{dialogue.content.linkTitle}}</div>
-                      <div class="dialog-desc">{{dialogue.content.linkDesc}}</div>
+                <div class="dialog flex-wrap dialogue-link" v-if="item.type === 'link'">
+                  <div class="flex-wrap">
+                    <img class="link-img" :src="item.content.linkImg"/>
+                    <div class="dialog-right flex-grow1">
+                      <div class="dialog-title line-clamp">{{item.content.linkTitle}}</div>
+                      <div class="dialog-desc line-clamp2">{{item.content.linkDesc}}</div>
                     </div>
-                </div>
-              <img class="avatar" :src="userAvatar"/>
-            </div>
-          </template>
-          <template v-else>
-            <div class="dialogue-content tl">
-              <img class="avatar" :src="doctorAvatar"/>
-              <div class="dialog" v-if="dialogue.type === 'text'">
-                {{dialogue.content}}
-              </div>
-              <div class="dialog" v-if="dialogue.type === 'img'">
-                  <img class="sendimg" :src="dialogue.content"/>
-              </div>
-              <div class="dialog flex-wrap" v-if="dialogue.type === 'link'">
-                  <img class="full-img" :src="dialogue.content.linkImg"/>
-                  <div class="dialog-right">
-                    <div class="dialog-title">{{dialogue.content.linkTitle}}</div>
-                    <div class="dialog-desc">{{dialogue.content.linkDesc}}</div>
                   </div>
+                </div>
+                <img class="avatar" :src="userAvatar"/>
+            </div>
+            <div class="dialogue-content tl" v-else>
+              <img class="avatar" :src="doctorAvatar"/>
+              <div class="dialog" v-if="item.type === 'text'">
+                {{item.content}}
+              </div>
+              <div class="dialog dialogue-img" v-if="item.type === 'img'">
+                  <img class="sendimg" :src="item.content"/>
+              </div>
+              <div class="dialog flex-wrap dialogue-link" v-if="item.type === 'link'">
+                  <div class="flex-wrap">
+                      <img class="link-img" :src="item.content.linkImg"/>
+                      <div class="dialog-right flex-grow1">
+                        <div class="dialog-title line-clamp">{{item.content.linkTitle}}</div>
+                        <div class="dialog-desc line-clamp2">{{item.content.linkDesc}}</div>
+                      </div>
+                    </div>
               </div>
             </div>  
-          </template>
         </div>
       </div>
-      <div class="btn-add">添加</div>
+      <div class="page-bottom">
+        <div class="flex-wrap">
+          <div class="more-fun">
+              <img class="add" src="../../img/little-add.png"/>
+          </div>
+          <div class="input-wrap flex-grow1">
+            <input class="dialog-input" type="text">
+          </div>
+          <div class="send">发送</div>
+        </div>
+      </div>
   </section>
   <script src="../../js/pages/dialogue.js"></script>
 </body>

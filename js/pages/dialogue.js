@@ -7,6 +7,7 @@ var index_vm = new Vue({
   data: {
     doctorAvatar: "../../img/avatar.png",
     userAvatar: "../../img/avatar2.png",
+    sendTxt:"",
     dialogueList: [{
       type: "text",
       isMine: false,
@@ -21,7 +22,7 @@ var index_vm = new Vue({
       content:"https://cn.vuejs.org/images/logo.png"
     },{
       type: "link",
-      isMine: true,
+      isMine: false,
       content: {
         linkImg: "https://cn.vuejs.org/images/logo.png",
         linkTitle:"请进一步填写问诊单",
@@ -29,7 +30,7 @@ var index_vm = new Vue({
       }
     },{
       type: "link",
-      isMine: true,
+      isMine: false,
       content: {
         linkImg: "https://cn.vuejs.org/images/logo.png",
         linkTitle:"赵某某医生的建议方",
