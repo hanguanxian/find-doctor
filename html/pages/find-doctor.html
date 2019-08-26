@@ -18,6 +18,7 @@
       <img class="icon-search" src="../../img/icon/search.png" >
       <input type="text" class="search-input" placeholder="搜索不适、医生、科室等" v-model="search">
     </div>
+    <div class="placeholder"></div>
     <div class="question-wrapper" v-for="(item, index) in departmentList">
       <div class="question"><i class=""></i>{{item.department}}</div>
       <div class="option-wrapper">
@@ -26,6 +27,7 @@
         </div>
       </div>
     </div>
+    <div class="placeholder"></div>
     
   </section>
   <script src="../../js/pages/find-doctor.js"></script>

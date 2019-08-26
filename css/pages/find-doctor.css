@@ -4,12 +4,17 @@ body {
 .page-search {
     padding: 36px 40px 18px;
     border-bottom: 2px solid #ececec;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 2;
 }
 .page-search .icon-search {
     width: 40px;
     position: absolute;
-    top: 42%;
+    top: 47%;
     left: 7%;
 }
 .page-search .search-input {
@@ -51,4 +56,7 @@ body {
     margin-right: 18px;
     margin-top: 18px;
     border: 2px solid #ececec;
+}
+.placeholder {
+    height: 150px;
 }
