@@ -66,4 +66,6 @@ html/add-address.html//05新增地址
 
 html/dialogue.html//04在线咨询-对话
 
+html/order.html//支付订单
+
 
