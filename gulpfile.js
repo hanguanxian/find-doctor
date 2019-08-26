@@ -83,7 +83,7 @@ gulp.task('browserify', function() {
 		      next(null, file);
 		    });
 	    }))
-	    .pipe(uglify()) // uglify
+	    // .pipe(uglify()) // uglify
 	    //.pipe(sourcemaps.init({loadMaps: true}))
 	    //.pipe(sourcemaps.write("."))
 	    .pipe(rev())

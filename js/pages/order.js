@@ -3,7 +3,7 @@ var $ = require("jquery");
 var C = require("common");
 
 var index_vm = new Vue({
-  el: '#advice-container',
+  el: '#order-container',
   data: {
     switchOpen: true,
   },
@@ -11,8 +11,7 @@ var index_vm = new Vue({
     sendSms: function() {
       var vm = this;
     },
-    submit: function() {
-      console.log(11);
+    reg: function() {
       var vm = this;
     }
   },

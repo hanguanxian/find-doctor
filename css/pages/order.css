@@ -1,0 +1,22 @@
+.white-bg {
+    background-color: #fff;
+}
+
+.placeholder {
+    width: 100%;
+    height: 22px;
+}
+.page-line {
+    background-color: #fff;
+    padding: 32px 0;
+}
+.label {
+    padding: 0 27px;
+    font-size: 26px;
+    color: #333;
+    width: 140px;
+}
+.page-line .text {
+    font-size: 26px;
+    color: #999;
+}
