@@ -13,7 +13,7 @@
         "browserify-shim": "^3.8.13",
         "clean": "^4.0.2",
         "fs": "^0.0.1-security",
-        "gulp": "^3.9.1",
+        "gulp": "^4.0.2",
         "gulp-clean": "^0.3.2",
         "gulp-concat": "^2.6.1",
         "gulp-connect": "^3.2.3",
@@ -47,7 +47,7 @@
         "yargs": "^6.6.0"
     },
     "dependencies": {
-        "gulp": "^3.9.1",
+        "gulp": "^4.0.2",
         "lib-flexible": "^0.3.2",
         "qrcode": "^0.8.2",
         "weui": "^2.0.1",
